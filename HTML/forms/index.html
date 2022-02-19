@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Play</title>
+  </head>
+  <body>
+    <!--LABEL AND INPUT-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="form"
+      id="form"
+    >
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" />
+      <label for="Password">Password:</label>
+      <input type="password" id="Password" />
+    </form>
+    <br />
+    <br />
+    <br />
+
+    <!--RADIO TYPE LABELS-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="radio"
+      id="radio"
+    >
+      <!--FOR PROGRAM TO KNOW THAT FORMS CREATE A GROUP, GIVE THEM ALL THE SAME NAME VALUE-->
+      <input
+        name="country"
+        type="radio"
+        id="Romania"
+        value="Romania"
+        checked="checked"
+      />
+      <label for="Romania">Romania</label>
+      <br />
+      <input name="country" type="radio" id="Serbia" value="Serbia" />
+      <label for="Serbia">Serbia</label>
+      <br />
+      <input name="country" type="radio" id="Bulgaria" value="Bulgaria" />
+      <label for="Bulgaria">Bulgaria</label>
+    </form>
+    <br />
+    <br />
+    <br />
+    <!--CHECKBOX TYPE-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="checkbox"
+      id="checkbox"
+    >
+      <input type="checkbox" name="question" value="like" id="question" />
+      <label for="question">I like HTML</label>
+    </form>
+    <br />
+    <br />
+    <br />
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="submit"
+      id="submit"
+    >
+      <input type="submit" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <!--NUMBER TYPE-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="number"
+      id="number"
+    >
+      <label for="quantity">Numbers 1 to 7:</label>
+      <input type="number" name="quantity" min="1" max="7" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <!--COLOR TYPE-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="color"
+      id="color"
+    >
+      <input type="color" name="black" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <!--RANGE TYPE-->
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="range"
+      id="range"
+    >
+      <label for="range">Range form:</label>
+      <input type="range" name="range" min="1" max="7" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <form
+      action="script.php"
+      method="POST"
+      enctype="multipart/form-data"
+      name="textarea"
+      id="area"
+    >
+      <textarea id="textarea" name="textarea">
+JSHEGWUASOIJEBBSJSDIUHWGABZNXDJ</textarea
+      >
+    </form>
+  </body>
+</html>
