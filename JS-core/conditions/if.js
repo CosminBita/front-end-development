@@ -1,6 +1,6 @@
 var isRaining = false
 var isSunny = false
-var isSnowing = false
+var isSnowing = true
 
 //if with one branch
 if (isRaining) {
