@@ -1,0 +1,10 @@
+.warning {
+    color: red;
+    background-color: black;
+    font-weight: bolder;
+}
+
+.message {
+    font-style: italic;
+}
+
