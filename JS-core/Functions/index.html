@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      /*var a = 5;
+var b = 10;
+var rectArea = a * b;*/
+
+      /*FUNCTION WITH TWO PARAMETERS (ENTRY AND RETURN):
+      function calculateRectArea(a, b) {
+        return a * b;
+      }
+      var result = calculateRectArea(5, 10);
+      console.log(result);*/
+
+      /* FUNCTION WITH ONE PARAMETER (ENTRY):
+      function sayHello(name) {
+          console.log('Say hello ' + name)
+      }
+      sayHello('Adam');*/
+
+      /*FUNCTION WITH NO PARAMETERS:
+      function sayHelloWorld() {
+        console.log("Hello, world!");
+      }
+      sayHelloWorld();*/
+
+      /*FUNCTION WITH TWO UNDEFINED PARAMETERS:
+      function calcRectArea(a, b) {
+        console.log(a);
+        console.log(b);
+        return a * b;
+      }
+      var result = calcRectArea();
+      console.log(result);*/
+
+      /* FUNCTION WITH FLEXIBLE NUMBER OF PARAMETERS;
+      function myFunction(...kkk) {
+          console.log(kkk);
+      }
+      myFunction(1, 2, 3, 4);
+      myFunction(1, 2, 3);*/
+      /*FUNCTION TO CONVERT FAHRENHEIT TO CELSIUS:
+      function f2c(f) {
+        let c = (f - 32) * 5 / 9;
+        return c;
+      }
+      document.write(f2c(150));*/
+
+      /*function calcRectArea(a = 10, b = 10) {
+        return a * b;
+      }
+      calcRectArea;*/
+
+      /* CREATING OBJECT USING LITERALS:
+      var subaruLegacy = {make:'Subaru', year: 1984, weight: 1233, model: 'Legacy'}
+      document.write(subaruLegacy.make);*/
+      
+      
+      /* CREATING OBJECT USING ARBITRARY BUILDER:
+      function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+      var car1 = new Car('Subaru', 'Legacy', '1974');
+      var car2 = new Car ('Ford', 'Taurus', '1988');
+      document.write(car1.year);*/
+      function myFunction(x) {
+        return x + x;
+      }
+      myFunction(7);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions Characteristics</title>
+  </head>
+  <body>
+    <script>
+      /*PRIMITIVE TYPES (numbers, boolean, string)
+        ARE TRANSMITTED TO FUNCTIIONS BY THEIR VALUE,
+        NOT BY REFERENCE. REDEFINING VALUE WITHIN FUNCTION
+        ONLY CHANGES THE COPY'S VALUE, NOT THE ACTUAL 
+        VARIABLE:
+        
+        var a = 5;
+        var b = 10;
+        function calcRectArea(a, b) {
+            var c = a * b;
+            a = 30;
+            return c;
+        }
+        var result = calcRectArea(a, b);
+        console.log('Result is: ' + result);
+        console.log('a= ' + a);*/
+
+      /* TRANSMITTING BY REFERENCE - OBJECT:
+
+        function calcRectArea(theObject) {
+            var result = theObject.numberA * theObject.numberB;
+            theObject.numberA = 30;
+            return result;  
+        }
+        var rectangle = { numberA: 5, numberB: 10};
+        var result = calcRectArea(rectangle);
+        console.log('Result is ' + result);
+        console.log('a= ' + rectangle.numberA);*/
+
+      /* ERROR IN CONSOLE, X IS NOT DEFINED - X IS NOT GLOBAL, IT IS DEFINED WITHIN FUNCTION:
+        function myFunction() {
+            var x = 4;
+        }
+        console.log(x);*/
+
+      /* FOR THE FUNCTION TO EXECUTE, ALWAYS DECLARE THE FUNCTION:
+      function myFunction() {
+        var x = 4;
+        var y = 5;
+        console.log(x);
+        console.log(y);
+      }
+      myFunction();*/
+
+      /* HOISTING:
+      console.log(myFunction(6));
+      function myFunction(x) {
+        return x * x;
+      }*/
+
+      let numberA = prompt("Please insert number A:");
+      let numberB = prompt("Please insert number B:");
+      let result = sum(numberA, numberB);
+      alert("The result is " + result);
+      function sum(a, b) {
+        return parseInt(a) + parseInt(b);
+      }
+    </script>
+  </body>
+</html>

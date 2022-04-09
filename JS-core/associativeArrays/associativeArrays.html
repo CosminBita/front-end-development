@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Associative</title>
+  </head>
+  <body>
+    <script>
+      /* var arr = {
+        id: 1,
+        username: "John",
+        email: "john@mail.com",
+        password: "hsjaw",
+      };
+      for (let elementele in arr) {
+        console.log(elementele);
+        console.log(arr[elementele]);
+        console.log(typeof arr);
+      }
+      console.log(arr.password);*/
+
+      /*let map = new Map([
+          ["id", 1],
+          ["username", "John"],
+          ["email", "john@mail.com"],
+          ["password", "hsjaw"],
+        ]);
+        console.log(typeof map);
+        console.log(map.size);*/
+
+      /*let user = {'id':1, 'username':'john', 'email':'john@mail.com'};
+        let map = new Map();
+        map.set (user, 10);
+        console.log(map.get(user));*/
+
+      let map = new Map();
+
+      map.set("id", 1);
+      map.set("username", "john");
+      map.set("password", "04as89v4v");
+      map.set("email", "john@gmail.com");
+
+      for(let [chei, valori] of map) {
+        console.log(chei + ':' + valori);
+      }
+    </script>
+  </body>
+</html>

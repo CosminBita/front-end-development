@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Module 5</title>
+  </head>
+  <body>
+    <script>
+      var firstNumber = prompt('Input first number here: ');
+      firstNumber = parseInt(firstNumber);
+      var operator = prompt('Enter arithmetic operator here: ');
+      var secondNumber = prompt('Enter second number here: ');
+      secondNumber = parseInt(secondNumber);
+      var sum = firstNumber + secondNumber;
+      var difference = firstNumber - secondNumber;
+      var multiplication = firstNumber * secondNumber;
+      var division = firstNumber / secondNumber;
+      
+      switch(operator) {
+          case '+':
+              alert(sum)
+              break;
+          case '-':
+              alert(difference)
+              break;
+          case '*':
+              alert(multiplication)
+              break;
+          case '/':
+              alert(division)
+              break;
+      }
+      
+    </script>
+  </body>
+</html>

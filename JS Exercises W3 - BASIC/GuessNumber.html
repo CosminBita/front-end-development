@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Number</title>
+  </head>
+  <body>
+    <script>
+var number = Math.round(Math.random(0, 2) * 10);
+var guess = parseInt(prompt('Please enter a number between 0 and 2: '));
+if (guess == number) {
+  alert('Correct!')
+} else if (isNaN(guess) || guess > 2 || guess < 0) {
+  alert('Wrong value, I said numbers between 0 and 2, dipshit!')
+} else {
+  alert('Incorrect, try again!')
+}
+console.log(number);
+    </script>
+  </body>
+</html>

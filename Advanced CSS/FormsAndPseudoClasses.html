@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo -classes for HTML Forms</title>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 480px;
+    
+        }
+        input[type='text'] {
+            width: 100%;
+            padding: 10px;
+            border: solid 2px grey;
+            margin: 10px 0px 10px 0px;
+        }
+
+        input[type='text']:hover {
+            border: solid 4px red;
+        }
+
+        input[type='text']:focus {
+            border: solid 4px yellow;
+        }
+
+        input[type='submit'] {
+            padding: 10px;
+            border: solid 4px grey;
+            background-color: aquamarine;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type='submit']:hover {
+            border: solid 4px rgb(97, 97, 67); 
+            cursor: pointer;
+        }
+        input[type='submit']:focus {
+            border: solid 4px rgb(34, 34, 33);
+        }  
+        input[type='submit']:active {
+            border: solid 4px rgb(86, 40, 94);
+        }
+        input[type='checkbox']:checked+label {
+            color:rgb(31, 221, 72);
+        }
+    </style>
+  </head>
+  <body>
+  <div id='wrapper'>
+  <form>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="NAME"
+      autocomplete="off"
+    />
+
+    <input
+    type="text"
+    name="email"
+    id="'email"
+    placeholder="EMAIL"
+    autocomplete="off"
+    />
+
+    <input
+    disabled
+    type="text"
+    name="subject"
+    id="subject"
+    placeholder="SUBJECT (disabled)"
+    autocomplete="off"
+    />
+  
+    <input
+    type="submit"
+    name ='submit'
+    id="submit"
+    value="SEND"
+    />
+    <input
+    type="checkbox"
+    name="check"
+    id="check"
+    />
+    <label for 'check'>YES, I WANT IT</label>
+  </form>
+  </div>
+ </body>
+</html>

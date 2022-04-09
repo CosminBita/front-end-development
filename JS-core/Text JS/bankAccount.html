@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+<body>
+    <script>
+        const INSERT = '0000000';
+        let bankAccount = prompt('Enter your account number here: ');
+        let firstPart = bankAccount.substring(0,2);
+        let secondPart = bankAccount.substring(2, 9);
+        var finalAccount = firstPart + INSERT + secondPart;
+        alert('Your electronic account number is: ' + finalAccount);
+    </script>
+</body>
+</html>

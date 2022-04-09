@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions - Module 5</title>
+  </head>
+  <body>
+    <script>
+      /*  IF, ELSE IF AND ELSE:
+    
+    var speed = 50;
+      if (speed > 110) {
+        console.log("You are going too fast...");
+      } else if (speed <= 110) {
+        console.log("Good driving...");
+      } else {
+        console.log("Incorrect value...");
+      }*/
+      /* SWICTH:
+
+      var x = 2;
+      switch (x) {
+        case 0:
+          console.log("value is zero");
+          break;
+        case 1:
+        case 2:
+          console.log("value is one or two");
+          break;
+        default:
+          console.log("value is undefined");
+      }*/
+      /* TERNARY OPERATOR:
+      var age = 20;
+      var message = (age < 18) ? 'Go home' : 'Welcome';
+      console.log(message);*/
+      /* USING IF TO DO THE SAME AS ABOVE:
+      var age = 20;
+      var message;
+      if (age < 18) {
+        message = "You cannot enter";
+      } else {
+        message = "Welcome";
+      }
+      console.log(message);*/
+
+      let message = prompt("Insert a number between one and seven:");
+      switch (message) {
+        case '1':
+          document.write("Monday");
+          break;
+        case '2':
+          document.write("Tuesday");
+          break;
+        case '3':
+          document.write("Wednesday");
+          break;
+        case '4':
+          document.write("Thursday");
+          break;
+        case '5':
+          document.write("Friday");
+          break;
+        case '6':
+          document.write("Saturday");
+          break;
+        case '7':
+          document.write("Sunday");
+          break;
+        default:
+          document.write('Wrong number, dipshit');
+          break;
+      }
+    </script>
+  </body>
+</html>

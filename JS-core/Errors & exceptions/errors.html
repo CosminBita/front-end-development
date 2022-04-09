@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Errors</title>
+  </head>
+  <body>
+    <script>
+       var b = 3333;
+       try {
+         console.log("Value of b is " + b);
+       } catch (err) {
+         // CATCH (ERR) IS ONLY EXECUTED IF THERE IS AN ERROR
+         console.log("Error name is " + err.name);
+         console.log("Error message is " + err.message);
+       } finally {
+         console.log("Cu pula, inainteeeee!");
+       }
+       console.log("hello, world");
+
+       // throw "this is error"; // FAKE ERROR, WORKS AS A REAL ONE. IT DISRUPTS FLOW.
+      /* function divide(a, b) {
+         if (b == 0) {
+           var e = new Error("Division by zero is not allowed");
+           e.name = "Invalid division";
+           throw e;
+         }
+         return a / b;
+       }
+       try {
+         divide(5, 0);
+       } catch (err) {
+         console.log("Error name: " + err.name);
+         console.log("Error message: " + err.message);
+       }*/
+
+       /*function divide (a,b) {
+           if (b==0) {
+               throw {
+                   name: 'Divider Error',
+                   message:'Divider cannot be zero'
+               }
+             } else if (b>1000) {
+                   var e = new Error ('Divider cannot be greater than 1000');
+                   console.log(e);
+               }
+               return a / b;
+           }*/
+    /* try {  
+         divide (10,0);
+     } catch (err) {
+         console.log('Caught error, move on.')
+     }*/
+     //divide (192829, 1202);//
+     
+
+    </script>
+  </body>
+</html>

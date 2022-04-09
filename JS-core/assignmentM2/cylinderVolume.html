@@ -8,11 +8,11 @@
   </head>
   <body>
     <script>
-      var radius = prompt("Enter cylinder radius:");
-      var π = 3.14;
-      var height = prompt("Enter cylinder height:");
-      var volume = parseInt(radius) * parseInt(radius) * π * parseInt(height);
-      alert("The cylinder volume is: " + volume);
+      var r = prompt("Enter radius here: ");
+      var pi = 3.14;
+      var diameter = prompt("Enter diameter here: ");
+      var result = parseInt(Math.pow(r, 2)) * pi * parseInt(diameter);
+      alert('The cylinder volume is: ' + result);
     </script>
   </body>
 </html>

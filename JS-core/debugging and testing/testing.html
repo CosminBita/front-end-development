@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test the bitch</title>
+  </head>
+  <body>
+    <script>
+      var x = prompt("Type in first number: ");
+      var y = prompt("Type in second number: ");
+
+      let result = compare(x, y);
+
+      function compare(x, y) {
+        x = parseInt(x);
+        y = parseInt(y);
+        if (x > y) {
+          return 1;
+        } else if (y > x) {
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+      switch (result) {
+        case 1:
+          alert("Number " + x + " is greater than " + y);
+          break;
+        case -1:
+          alert("Number " + y + " is greater than " + x);
+          break;
+        case 0:
+          alert("Numbers are equal");
+          break;
+      }
+
+      function testCompare() {
+        let fail = false;
+        if (compare(22, 11) !== 1) {
+          fail = true;
+        }
+        if (compare(11, 22) !== -1) {
+          fail = true;
+        }
+        if (compare(22, 22) !== 0) {
+          fail = true;
+        }
+        if(fail){
+            console.log('Test failed.')
+        } else {
+            console.log('Everything is OK.')
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging</title>
+  </head>
+  <body>
+    <script>
+      /*var number_a = parseInt(prompt("Pease enter the first number: "));
+      var number_b = parseInt(prompt("Please enter the second number: "));
+      if (number_a > number_b)
+        alert("Number " + number_a + " is greater than " + number_b + ".");
+      else if (number_a < number_b)
+        alert("Number " + number_b + " is greater than " + number_a + ".");
+      else if (isNaN(number_a) || isNaN(number_b))
+        alert("One of the values inserted is not a number");
+      else if (number_a == number_b) alert("The numbers are equal");
+      console.log(typeof(number_a));*/ //like this you can't text, use following method instead
+
+      var x = prompt("Please enter first number:");
+      var y = prompt("Please enter second number: ");
+      var x = parseInt(x);
+      var y = parseInt(y);
+      var result = compareNumbers(x, y);
+      function compareNumbers(x, y) {
+        if (x > y) {
+          return 1;
+        } else if (x < y) {
+          return -1;
+        } else if (isNaN(x) || isNaN(y)) {
+          return "xxx";
+        } else if (x == y) {
+          return 0;
+        }
+      }
+      switch (result) {
+        case 1:
+          alert("Number " + x + " is greater than " + y + ".");
+          break;
+        case -1:
+          alert("Number " + y + " is greater than " + x + ".");
+          break;
+        case "xxx":
+          alert("One of the values is not a number.");
+          break;
+        case 0:
+          alert("The numbers are equal.");
+      }
+
+      function testCompare() {
+        let fail = false;
+        if (compareNumbers(22, 11) !== 1) {
+          fail = true;
+        }
+        if (compareNumbers(11, 22) !== -1) {
+          fail = true;
+        }
+        if (compareNumbers(0, 0) !== 0) {
+          fail = true;
+        }
+
+        if (fail) {
+          console.log("test failed");
+        } else {
+          console.log("everything is OK");
+        }
+      }
+    </script>
+  </body>
+</html>
