@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If single branch, multiple branches and more</title>
+</head>
+<body>
+    <script>
+        var isSunny = false;
+        var isRaining = true;
+        var isSnowing = true;
+
+        if (isSunny) {
+            document.write('get sunglasses');
+        } else {
+            document.write('it is not sunny');
+        } // single branch
+
+        document.write('<br>');
+
+        if (isSunny) {
+            document.write('get sunglasses');
+        } else if (isRaining) {
+            document.write('get umbrella');
+        } else if (isSnowing) {
+            document.write ('make a snowman');
+        } // multiple branches
+        
+        document.write('<br>');
+
+        if (isSunny) {
+            document.write('get sunglasses');
+        } if (isRaining) {
+            document.write('get umbrella');
+        } if (isSnowing) {
+            document.write ('make a snowman');
+        } // without else it executes all valid statements
+
+    </script>
+</body>
+</html>

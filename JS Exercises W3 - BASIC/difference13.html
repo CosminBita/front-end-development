@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Difference minus 13</title>
+  </head>
+  <body>
+    <h3 id="demo"></h3>
+    <script>
+      var x = parseInt(prompt('Insert number here:'));
+      var y = 13;
+      var z = x - y;
+      if (x > y) {
+          document.getElementById('demo').innerHTML = 2 * z;
+      } else if (isNaN(x)) {
+          alert('Not a number, try again!');
+      } else {
+          document.getElementById('demo').innerHTML = z;
+      }
+    </script>
+  </body>
+</html>

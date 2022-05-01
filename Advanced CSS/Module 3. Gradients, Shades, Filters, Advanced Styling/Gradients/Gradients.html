@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 250px;
+           
+        }
+        #box-1 {
+            background: linear-gradient(red 25%, yellow 30%, green 100%);
+            /*to left, to top, to bottom, to right, to top left, etc.*/
+            margin: 10px auto;
+        }
+        #box-2 {
+            background: linear-gradient(red 33%, blue 33%, blue 66%, green 66%);
+            
+        }
+        #box-3 {
+            background: linear-gradient(transparent, red 70%), url(star.png);
+            margin: 5px auto;
+        }
+        #box-4 {
+            background: radial-gradient(at top left, red, blue);
+        }
+        #box-5 {
+            background: radial-gradient(at 100% 50%, red, blue);
+            margin: 10px auto;
+        }
+        #box-6 {
+            background: conic-gradient(from 45deg at 50% 50%, red, blue);
+        }
+        #box-7 {
+            background:linear-gradient(red 0px, blue 30px);/* blue starts at 30px*/
+            margin: 10px auto;
+        }
+        #box-8 {
+            background:repeating-linear-gradient(red 0px, blue 30px);/*repeating feature can be used on radial and conic radiants as well*/
+        }
+        #box-9 {
+            background: repeating-conic-gradient(yellow 0%, blue 2%);
+            margin: 10px auto;
+        }
+        #box-10 {
+            background: radial-gradient(farthest-corner at 100% 50%, violet 25%, grey 25%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class = 'box' id = 'box-1'></div>
+    <div class = 'box' id = 'box-2'></div>
+    <div class = 'box' id = 'box-3'></div>
+    <div class = 'box' id = 'box-4'></div>
+    <div class = 'box' id = 'box-5'></div>
+    <div class = 'box' id = 'box-6'></div>
+    <div class = 'box' id = 'box-7'></div>
+    <div class = 'box' id = 'box-8'></div>
+    <div class = 'box' id = 'box-9'></div>
+    <div class = 'box' id = 'box-10'></div>
+</body>
+</html>

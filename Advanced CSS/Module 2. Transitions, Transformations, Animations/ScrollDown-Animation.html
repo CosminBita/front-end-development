@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Down Arrow - Animation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      margin: 0 auto;
+      transform: translateY(60px);
+    }
+    #Intro-Section {
+      width: 100%;
+      background-color: #914E67;
+      height: 100vh;
+      position: relative;
+    }
+    #Next-Section {
+      width: 100%;
+      background-color: #5D7586;
+      height: 100vh;
+    }
+    #scrollDownArrow {
+      position: absolute;
+      bottom: 24px;
+      width: 46px;
+      height: 40px;
+      border: solid 2px white;
+      border-radius: 100%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+
+      animation: bounce 2s infinite running;
+    }
+    #scrollDownArrow::before {
+      position: absolute;
+      content:'';
+      width: 20px;
+      height: 20px;
+      border-right: solid 2px white;
+      border-bottom: solid 2px white;
+      left: 0;
+      right: 0;
+      top: 5px;
+      margin: 0 auto;
+      transform: rotate(45deg);
+    }
+
+    #scrollDownArrow:hover {
+        animation-play-state: paused;
+    }
+
+
+    @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0px);
+        }
+        40% {
+            transform: translateY(-5px);
+        }
+        60% {
+            transform: translateY(-3px);
+        }
+    }
+  </style>
+</head>
+<body>
+  <div id = 'Intro-Section'>
+    <h1>Section One</h1>
+    <a id = 'scrollDownArrow' href = '#Next-Section'></a>
+  </div>
+  <div id = 'Next-Section'>
+    <h1> Section Two</h1>
+  </div>
+</body>
+</html>

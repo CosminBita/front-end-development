@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimationsCSS</title>
+    <style>
+ .box {
+            background-color: antiquewhite;
+            background-image: url(star.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            color: white;
+            margin: 64px auto;
+            font-family: sans-serif;
+            font-size: 28px;
+            width: 350px;
+            height: 280px;
+            border-radius: 8px;
+
+            /*animation-name: my-animation;
+            animation-duration: 3s;
+            animation-delay: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: backwards;
+            animation-play-state: running;*/
+            animation: my-animation 3s ease 1s 1 forwards running;
+        }
+        @keyframes my-animation {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+                width: 350px;
+                height: 280px;
+            }
+            33% {
+                transform: translateX(0px) rotate(360deg);
+                width: 350px;
+                height: 280px;
+            }
+            66% {
+                transform: translate(300px, 50px) rotate(0deg);
+                width: 175px;
+                height: 140px;
+            }
+            99%{
+                transform: translateX(0px) rotate(0deg);
+                width: 800px;
+                height: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = 'box'></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>CSS Transformations - Carousel</title>
+    <style>
+
+
+      #main-container {
+        perspective: 400px;
+        position: relative;
+        width: 300px;
+        height: 220px;
+        margin: 80px auto;
+      }
+
+
+      #tile-container {
+        transform: translateZ(-300px) rotate3d(0, 1, 0, 0deg);
+        transform-style: preserve-3d;
+        animation-name: carousel-animation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+      }
+
+      .tile {
+        width: 300px;
+        height: 220px;
+        border: solid 1px black;
+        border-radius: 8px;
+        position: absolute;
+        margin: 0 auto;
+
+        opacity: 0.95;
+      }
+
+
+
+      #tile-1 {
+        background-color: red;
+        transform: rotateY(0deg) translateZ(300px);
+      }
+      #tile-2 {
+        background-color: yellow;
+        transform: rotateY(72deg) translateZ(300px);
+      }
+      #tile-3 {
+        background-color: blue;
+        transform: rotateY(144deg) translateZ(300px);
+      }
+      #tile-4 {
+        background-color: green;
+        transform: rotateY(216deg) translateZ(300px);
+      }
+      #tile-5 {
+        background-color: brown;
+        transform: rotateY(288deg) translateZ(300px);
+      }
+      @keyframes carousel-animation {
+          0% {
+              transform: translateZ(-300px) rotate3d(0, 1, 0, 0deg);
+          }
+          45% {
+              transfrom: translateZ(-300px) rotate3d(0, 1, 0, 160deg);
+          }
+          55% {
+              transform: translateZ(-300px) rotate3d(0, 1, 0, 160deg);
+          }
+          100% {
+              transform: translateZ(-300px) rotate3d(0, 1, 0, 360deg);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="tile-container">
+        <div class="tile" id="tile-1"></div>
+        <div class="tile" id="tile-2"></div>
+        <div class="tile" id="tile-3"></div>
+        <div class="tile" id="tile-4"></div>
+        <div class="tile" id="tile-5"></div>
+      </div>
+    </div>
+  </body>
+</html>
