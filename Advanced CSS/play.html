@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:ROOT</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      html {
+        --primary-color: red;
+        
+      }
+
+      #papi {
+          width: calc(100% - 35px);
+          background-color: aquamarine;
+      }
+      #box-1 {
+        color: var(--primary-color);
+      }
+      #box-2 {
+        color: var(--primary-color);
+      }
+      span[data-descr] {
+          position: relative;
+          font-weight: bold;
+          color: brown;
+          cursor: help;
+      }
+      span[data-descr]:hover::after {
+          content: attr(data-descr);
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          background-color: beige;
+          color: blueviolet;
+          padding: 10px;
+          border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+      <div id="papi">
+    <div id="box-1">TEXT ONE</div>
+    <div id="box-2">TEXT TWO</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobort
+        is. In rhoncus neque odio, non <span data-descr="Lorem ipsum dolor sit amet">maximus</span> ex pretium quis. Vivamus interdum convallis ex ac efficitur.</p>
+</div>
+  </body>
+</html>

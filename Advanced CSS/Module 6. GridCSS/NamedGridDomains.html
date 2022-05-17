@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Domains</title>
+    <style>
+        #domains {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 160px 160px 160px;
+            grid-template-rows: 120px 120px 120px;
+            column-gap: 16px;
+            row-gap: 10px;
+            grid-template-areas:
+            ". a a"
+            "b b .";
+        }
+        #domain-1 {
+            height: 120px;
+            color:azure;
+            background-color: brown;
+            line-height: 120px;
+
+            grid-area: a;
+        }
+        #domain-2 {
+            height: 120px;
+            color:azure;
+            background-color: rgb(45, 18, 225);
+            line-height: 120px;
+
+            grid-area: b;
+        }
+    </style>
+</head>
+<body>
+    <div id="domains">
+        <div id="domain-1">Area Domain One</div>
+        <div id="domain-2">Area Domain Two</div>
+    </div>
+</body>
+</html>

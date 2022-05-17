@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        #hero {
+            width:  600px;
+            height: 400px;
+            background-image: url(liv2025w.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 1024px) {
+            #hero {
+                background-image: url("liv1024w.jpg");
+            }
+        }
+        @media screen and (max-width: 850px) {
+            #hero {
+                background-image: url("liv850w.jpg");
+            }
+        }
+        @media screen and (max-width: 728px) {
+            #hero {
+                background-image: url("liv728w.jpg");
+            }
+        }
+        @media screen and (max-width: 418px) {
+            #hero {
+                background-image: url("liv418w.jpg");
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id='hero'></div>
+</body>
+</html>

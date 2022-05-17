@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Items</title>
+    <style>
+      #container {
+        border: solid 1px black;
+        margin: 20px;
+        display: flex;
+        text-align: center;
+        height: 50vh;
+      }
+      #container div {
+        margin: 6px;
+        line-height: 80px;
+      }
+      #box1 {
+        background-color: brown;
+       /* order: 5; -> default first position is zero*/
+       flex: 1 1 2em; /* grow shrink basis*/
+      }
+
+      #box2 {
+        background-color: rgb(83, 219, 124);
+        /*flex-grow: 1; ->flex-grow fills in the empty space*/
+       /* flex-shrink: 1; -> shrinks when there is not enough space*/
+       flex: 1 3 2em;/*grow shrink baseline*/
+      }
+
+      #box3 {
+        background-color: rgb(206, 83, 169);
+        flex: 1 1 2em;
+        align-self: center; /*flex-start, flex-end, normal, stretch*/
+      }
+
+      #box4 {
+        background-color: rgb(42, 147, 165);
+        flex: 1 1 2em;
+      }
+
+      #box5 {
+        background-color: rgb(219, 83, 156);
+        flex: 1 1 2em;
+      }
+
+      #box6 {
+        background-color: rgb(234, 208, 12);
+        flex: 1 1 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box1">A</div>
+      <div id="box2">B</div>
+      <div id="box3">C</div>
+      <div id="box4">D</div>
+      <div id="box5">E</div>
+      <div id="box6">F</div>
+    </div>
+  </body>
+</html>

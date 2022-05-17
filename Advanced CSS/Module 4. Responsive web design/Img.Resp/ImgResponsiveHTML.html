@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMG RESP HTML ELEMENT</title>
+    <style>
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+ <!-- <body>
+    /*<img
+      srcset="
+        liv418w.jpg   418w,
+        liv728w.jpg   728w,
+        liv850w.jpg   850w,
+        liv1024w.jpg 1024w,
+        liv2025w.jpg 2025w
+      "
+      sizes="(max-width: 418px) 418px,
+                  (max-width: 728px) 728px,
+                  (max-width: 850px) 850px,
+                  (max-width: 1024px) 1024"
+      src="liv1024w.jpg"
+      alt="SYNTAX"
+    />-->
+
+    OR
+
+    <picture>
+        <source srcset = 'liv418w.jpg'  media = '(max-width: 418px)'>;
+        <source srcset = 'liv728w.jpg'  media = '(max-width: 728px)'>;
+        <source srcset = 'liv850w.jpg'  media = '(max-width: 850px)'>;
+        <source srcset = 'liv1024w.jpg' media = '(max-width: 1024px)'>;
+        <img src = 'liv1024w.jpg'>
+    </picture>
+  </body>
+</html>

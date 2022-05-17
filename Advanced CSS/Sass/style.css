@@ -1,0 +1,60 @@
+body {
+  /*!global changes variable from local to global*/
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #00ff73;
+}
+
+article h1 {
+  color: blue;
+}
+article h2 {
+  color: red;
+}
+article p {
+  color: #00ff73;
+}
+
+.box {
+  border-style: solid;
+  border-color: black;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.box {
+  moz-transform: translateX(20px);
+  webkit-transform: translateX(20px);
+  ms-transform: translateX(20px);
+  o-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+#text-2, #text-1 {
+  font-weight: bold;
+  font-size: 16px;
+  color: aqua;
+}
+
+body {
+  color: #2b1a1a;
+}
+
+body {
+  background-color: #debfbf;
+  font-size: 18px;
+}
+
+.box {
+  width: 50%;
+  background-color: yellow;
+}
+.box:hover {
+  background-color: #c7c797;
+}
+
+/*# sourceMappingURL=style.css.map */

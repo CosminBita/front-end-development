@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables Inheritance</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #box-2 {
+        --text-color: blue;
+      }
+      #box-3 {
+        --text-color: red;
+      }
+
+
+      
+      #box-1 {
+        color: var(
+          --text-color,
+          yellow
+        ); /*no effect because box-1 is above box-2 and box-3 in html structure. When the first one has no effect, the second one applies*/
+      }
+      #box-2 {
+        color: var(--text-color);
+      }
+      #box-3 {
+        color: var(--text-color);
+      }
+      #box-4 {
+        color: var(
+          --text-color
+        ); /*takes the value defined on its direct parent, box-2*/
+      }
+      #box-5 {
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-1">I am box-1.</div>
+    <div id="box-2">
+      I am box-2.
+      <div id="box-3">I am box-3.</div>
+      <div id="box-4">I am box-4.</div>
+    </div>
+    <div id="box-5">I am box-5.</div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Gallery</title>
+    <style>
+      #tiles {
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        justify-content: space-between;
+        gap: 20px;
+        text-align: center;
+      }
+      .box {
+        position: relative;
+        height: 70px;
+        background-color: rgb(135, 135, 185);
+        line-height: 110px;
+        border-radius: 5px;
+        background-image: url("placeholder-image.png");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .box:after {
+        content: "Image Title";
+        font-size: 10px;
+        position: absolute;
+        transform: translate(-50%, 20%);
+      }
+      #papi {
+        font-family: sans-serif;
+        width: 50%;
+      }
+      footer {
+        margin-top: 30px;
+      }
+      p {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 1024px) {
+        #tiles {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        #tiles {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 414px) {
+        #tiles {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="papi">
+      <header>
+        <h3>Gallery Heading</h3>
+      </header>
+      <div id="tiles">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <footer>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
+          tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

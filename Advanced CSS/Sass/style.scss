@@ -1,0 +1,93 @@
+$primary-dark-color: brown;
+body {
+    $primary-dark-color: rgb(0, 255, 115) !global;/*!global changes variable from local to global*/
+    font-family: sans-serif;
+}
+h1 {
+    color: $primary-dark-color;
+}
+
+
+
+article {
+    h1 {
+        color: blue;
+    }
+    h2 {
+        color: red;
+    }
+    p {
+        color: $primary-dark-color;
+    }
+}
+.box {
+    border: {
+        style: solid;
+        color: black;
+        radius: 9px;
+    }
+
+    font: {
+        size: 16px;
+        weight: bold;
+        family: serif;
+    }
+}
+
+
+
+@mixin transformareapulii($value) {
+    moz-transform: $value;
+    webkit-transform: $value;
+    ms-transform: $value;
+    o-transform: $value;
+    transform: $value;
+}
+
+.box {
+    @include transformareapulii(translateX(20px));
+}
+
+
+
+%shared-text {
+    font-weight: bold;
+    font-size: 16px;
+    color:aqua
+}
+
+#text-1 {
+   @extend %shared-text;
+}
+
+#text-2 {
+    @extend %shared-text;
+}
+
+
+
+
+
+
+@import 'colors';
+@import 'values';
+body {
+    background-color: $primary-light-color;
+    font-size: $main-font-size;
+}
+
+.box {
+    width: 600px / 900px * 75%;
+    background-color: yellow;
+    &:hover {
+        background-color: $secondary-light-color;
+    }
+}
+
+
+
+
+
+
+
+

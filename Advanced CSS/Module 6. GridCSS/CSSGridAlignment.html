@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Alignment</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-auto-rows: minmax(100px, auto);
+            gap: 16px;
+            text-align: center;
+            font-weight: bolder;
+            align-items: end; /*front, stretch, end, normal, center*/
+            justify-items: center;/*front, end, stretch, normal*/
+        }
+        .box {
+            background-color: brown;
+            color:black;
+        }
+        #grid :nth-child(5) {
+            align-self:center;
+        }
+        #grid :nth-last-child(1) {
+            justify-self: end;/*front, end, stretch, normal*/
+        }
+
+
+
+
+        #second-grid {
+            display: grid;
+            grid-template-columns: 160px 160px 160px;
+            grid-auto-rows: minmax(100px, 150px);
+            gap: 16px;
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 100px;
+            height: 80vh;
+            border: 1px dashed;
+            align-content: space-between; /*start, end, space-around, space-between, center*/
+            justify-content: space-around;/*start, end, space-around, space-between, center*/
+        }
+        .sec-box {
+            background-color: rgb(47, 24, 217);
+            color:black;}
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="box">ONE</div>
+        <div class="box">TWO</div>
+        <div class="box">THREE</div>
+        <div class="box">FOUR</div>
+        <div class="box">FIVE</div>
+        <div class="box">SIX</div>
+    </div>
+
+
+
+    <div id="second-grid">
+        <div class="sec-box">ONE</div>
+        <div class="sec-box">TWO</div>
+        <div class="sec-box">THREE</div>
+        <div class="sec-box">FOUR</div>
+        <div class="sec-box">FIVE</div>
+        <div class="sec-box">SIX</div>
+    </div>
+</body>
+</html>

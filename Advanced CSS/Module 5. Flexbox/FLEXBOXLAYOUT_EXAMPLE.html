@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            color:rgb(24, 23, 23);
+            font-family: serif;
+            text-align: center;
+        }
+        #main>p {
+            text-align: left;
+        }
+        #wrapper {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        #Header-1 {
+            background-color: rgb(240, 144, 26);
+            flex-basis:100%;
+        }
+        #main {
+            background-color: brown;
+            flex-grow: 5;
+            flex-basis: 0%;
+        }
+        #footer {
+            background-color: blueviolet;
+            flex-basis:100%;
+        }
+        #aside-1 {
+            flex-basis: auto;
+            background-color: aquamarine;
+            flex-grow: 1;
+        }
+        #aside-2 {
+            flex-basis: auto;
+            background-color: rgb(10, 216, 147);
+            flex-grow:1;
+        }
+        #main, #aside-1, #aside-2, #Header-1, #footer {
+            padding: 8px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="Header-1">
+        <h2>Header</h2>
+      </header>
+      <aside class="aside" id="aside-1">
+        <h2>Aside-1</h2>
+      </aside>
+      <div id="main">
+        <h2>Main</h2>
+        <p>
+          Tocmai s-a prezentat cum se definește dimensiunea inițială a
+          elementelor flexibile de-a lungul axei principale. Se pun întrebarea:
+          ce se va întâmpla cu dimensiunea elementelor în situațiile în care
+          spațiul disponibil al containerului este mai mare sau mai mic decât
+          cel necesar pentru a afișa elementele cu dimensiune inițială?
+          Proprietatea flex-grow influenţează posibilitatea de a mări elementul
+          dacă există spațiu care trebuie completat. Spațiul disponibil
+          menționat se poate vedea în imaginea 19.2., pe partea dreaptă.
+          Proprietatea flex-grow acceptă o valoare pozitivă întreagă, care
+          reprezintă proporția pe care un element ar trebui să o ocupe în
+          containerul lui părinte. Valoarea implicită este zero, ceea ce
+          înseamnă că elementul nu-şi va mări dimensiunea. Următorul exemplu
+          ilustrează utilizarea proprietății flex-grow:
+        </p>
+      </div>
+      <aside class="aside" id="aside-2">
+        <h2>Aside-2</h2>
+      </aside>
+      <footer id="footer">
+        <h2>Footer</h2>
+      </footer>
+    </div>
+  </body>
+</html>

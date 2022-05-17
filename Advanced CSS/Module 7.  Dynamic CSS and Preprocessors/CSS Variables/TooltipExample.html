@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Example</title>
+    <style>
+        p {
+            font-family: sans-serif;
+        }
+        span[data-descr] {
+            position: relative;
+            font-weight: bold;
+            color: blueviolet;
+            cursor: help;
+        }  
+        span[data-descr]:hover:after {
+            content:attr(data-descr);
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            background-color: rgb(78, 67, 89);
+            color: white;
+            border-radius: 4px;
+            min-width: 140px;
+            padding: 5px;;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      De asemenea, CSS este unul din exemplele limbajelor computerizate care nu
+      pot fi numite de programare.
+      <span data-descr="De asemenea, CSS este unul">Lui CSS</span> îi
+      lipsesc elementele de limbaj diferite, foarte semnificative, ce permit
+      limbajelor de programare să formuleze logica programării. Logica de
+      programare permite ca procesul de rezolvare a unei probleme din viața
+      reală să fie compilat în codul funcțional al programului.
+    </p>
+  </body>
+</html>

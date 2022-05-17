@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Configuration</title>
+    <style>
+      #grid1 {
+        display: grid;
+        /* grid-auto-flow: row;->row is default*/
+        /* grid-auto-columns: 200px;* -> creates columns of 200px wide/
+        /* grid-auto-rows: 200px; - > creates rows of 200px height*/
+        grid-template-columns: 100px 100px 100px; /*creates THREE columns with 100px width each*/
+        grid-template-rows: 75px; /*creates a row with 75px height - if you define only one row, the other row will be created by default by browser, high enough to fit its content. To define auto-rows, see line below*/
+        grid-auto-rows: 150px; /*defines a row's height on the automatically created rows*/
+      }
+
+
+
+      #grid2 {
+        display: grid;
+        grid-template-columns: auto auto auto; /*it would normally create three euqal columns, but since UNUUUUU is bigger, it creates that column wider to fit the content*/
+      }
+
+
+      #fractioning {
+          margin:30px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; /*relative units*/
+      }
+
+
+      #MinMaxGap {
+          display: grid;
+          margin: 30px;
+          grid-template-columns: repeat(3, minmax(120px, auto));
+          grid-auto-rows: minmax(100px, auto);
+          column-gap: 20px;
+          row-gap: 30px;
+          /*OR JUST gap: 20px --> BOTH COLUMNS AND ROWS*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid1">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+    </div>
+
+
+
+    <div id="grid2">
+      <div>UNUUUUUUUUUUUUUUUU</div>
+      <div>Doi</div>
+      <div>Trei</div>
+      <div>Patru</div>
+      <div>Cinci</div>
+      <div>Sase</div>
+    </div>
+
+
+    <div id="fractioning">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+      </div>
+
+
+      <div id="MinMaxGap">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+      </div>
+  
+  </body>
+</html>

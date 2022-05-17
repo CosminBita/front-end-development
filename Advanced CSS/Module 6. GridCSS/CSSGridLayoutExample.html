@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout Example</title>
+    <style>
+        body {
+            color: white;
+            font-family: sans-serif;
+        }
+        #papi {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 8px;
+
+            grid-template-areas:
+            'header header'
+            'aside article'
+            'footer footer';
+        }
+
+        header, article, aside, footer {
+            padding: 16px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgb(95, 95, 226);
+        }
+        article {
+            grid-area: article;
+            background-color: rgb(152, 95, 95);
+        }
+        aside {
+            grid-area: aside;
+            background-color: rgb(70, 3, 132);
+        }
+        footer {
+            grid-area: footer;
+            background-color: rgb(20, 73, 3);
+        }
+    </style>
+  </head>
+  <body>
+    <div id="papi">
+      <header>Header</header>
+      <article>
+        <h1>Article Title</h1>
+        <p>
+          În felul acesta a fost creat un CSS Grid cu cinci elemente. Trei
+          coloane au fost create explicit, folosind proprietatea
+          grid-template-columns, în timp ce crearea rândului a fost lăsată
+          pentru CSS Grid. Având în vedere că grid-ul are cinci elemente, într-o
+          astfel de situație se va face crearea automată a două rânduri
+          implicite în cadrul grid-ului. Astfel de rânduri create implicit pot
+          fi influenţate utilizând proprietatea grid-auto-rows. Valoarea acestei
+          proprietăţi este definită astfel încât rândurile create automat să
+          aibă o înălțime minimă de 100px, în timp ce înălțimea maximă va
+          depinde de înălțimea conținutului. CSS Grid-ul tocmai descris este
+          ilustrat în imaginea 22.3.
+        </p>
+      </article>
+      <aside>
+          <h1>Sidebar</h1>
+          <ul>
+              <li>Pula</li>
+              <li>Pizda</li>
+              <li>Gigi Marga</li>
+              <li>Inca unu'</li>
+              <li>Ultimu'</li>
+          </ul>
+      </aside>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

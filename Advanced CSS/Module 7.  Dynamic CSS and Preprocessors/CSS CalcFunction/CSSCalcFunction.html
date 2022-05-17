@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Calc Function</title>
+    <style>
+        #box {
+            width: 700px;
+            height: 500px;
+            background-image: url(liv418w.jpg);
+            background-repeat: no-repeat;
+            border: dashed 1px grey;
+            /*background-position: 20px 20px; --> when using absolute units, background-position is determined in relation to upper and left margins*/
+            background-position: calc(100% - 20px) calc(100% - 20px); /* on x axis and on y axis*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
