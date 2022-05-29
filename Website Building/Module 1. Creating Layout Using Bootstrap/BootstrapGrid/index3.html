@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning and Justifying Columns / Content and Self</title>
+    <style>
+    .col-3 {
+        border: solid 1px black;
+        background-color: aquamarine;
+    }
+    #secondDiv .col-3 {
+        background-color: brown;
+    }
+    .row {
+        border: solid 1px black;
+        margin-bottom: 50px;
+    }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!--Justify-content: end, center, start, around, between-->
+          <div class="col-3">.col 1</div>
+          <div class="col-3">.col 2</div>
+          <div class="col-3">.col 3</div>
+        </div>
+      </div>
+
+      <div id="secondDiv" class="container-fluid">
+        <div class="row vh-100 align-items-center">
+            <!--Align-items: center, start, end, stretch-->
+          <div class="col-3 align-self-start">.col 1</div>
+          <div class="col-3">.col 2</div>
+          <div class="col-3 align-self-stretch">.col 3</div>
+        </div>
+      </div>
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

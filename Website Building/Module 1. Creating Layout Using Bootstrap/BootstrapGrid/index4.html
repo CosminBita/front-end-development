@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      #SecondDiv {
+        margin-top: 50px;
+      }
+      .col-2 {
+        background-color: aquamarine;
+        border: solid 1px gray;
+      }
+
+      #ThirdDiv > .row {
+        border: 1px solid black;
+        margin: 50px;
+      }
+      #ThirdDiv .col-4 {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">1st in html</div>
+        <!--Default Order is 0. Order can be set for different screen sizes, or general without defining screen sizes-->
+        <div class="col-4 order-md-2">2nd in html</div>
+        <div class="col-4 order-md-1">3rd in html</div>
+      </div>
+    </div>
+
+    <div id="SecondDiv" class="container">
+      <div class="row" style="border: 1px solid black">
+        <div class="col-2 offset-xl-1">col-2</div>
+        <div class="col-2 offset-1">col-2</div>
+        <!--Offset-1 moves element by 1 column to the right-->
+        <div class="col-2 offset-md-3">col-2</div>
+      </div>
+    </div>
+
+    <div id="ThirdDiv" class="container">
+      <div class="row" style="border: 1px solid black">
+        <div class="col-4 d-xl-none">1st column</div>
+        <!--display: none in Bootstrap. The default display in Bootstrap is block.-->
+        <div class="col-4">2nd column</div>
+        <div class="col-4">3rd column</div>
+      </div>
+    </div>
+
+    <div id="FourthPapi" class="container-fluid">
+       <div class="row">
+        <div class="col-8">1st column</div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-4">A</div>
+            <div class="col-4">B</div>
+            <div class="col-4">C</div>
+          </div>
+          <div class="row">
+            <div class="col-4">D</div>
+            <div class="col-4">E</div>
+            <div class="col-4">F</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-12">2nd column</div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

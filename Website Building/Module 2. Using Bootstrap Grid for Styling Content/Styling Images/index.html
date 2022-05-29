@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling images</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        img {
+            margin-bottom: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <img class="img-fluid" src="img.jpg" alt="this is image">
+    <!--IMG-FLUID is a shortcut for two things: max-width:100% AND height: auto-->
+    <img class="'img-fluid rounded" src="thumb.jpg" alt="this is image" style="border: solid 1px black;">
+    <img class="img-fluid img-thumbnail" src="thumb.jpg" alt="this is image">
+    <img class="img-fluid rounded-circle d-block mr-auto" src="thumb.jpg" alt="this is image" style="border: solid 1px black;"
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
