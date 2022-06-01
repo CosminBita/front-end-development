@@ -4,57 +4,326 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Website Assignment</title>
     <style>
+      #row-2 {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+      #row-2:before {
+        position: absolute;
+        top: 70px;
+        left: 170px;
+        content: "We strive to make all of our creations exquisite.";
+        color: white;
+        height: 45px;
+        font-family: monospace;
+        font-weight: bold;
+        line-height: 27px;
+        background-color: #33c189ff;
+        padding: 10px;
+      }
+      .container {
+        margin: 50px auto;
+        padding: 0 40px;
+      }
+      #recentWork {
+        border-bottom: solid 1px rgb(188, 185, 185);
+        margin: 20px auto;
+        text-align: left;
+      }
+      #RW {
+        padding-left: 0;
+      }
+
+      #FTB {
+        border-bottom: solid 1px rgb(188, 185, 185);
+        margin: 20px auto;
+      }
+
+      #fromTheBlog {
+        padding-left: 0;
+      }
+      #row-4 p.text-muted {
+        line-height: 1px;
+      }
+
+      #row-5 p.text-muted {
+        line-height: 16px;
+      }
+
+      #row-dark {
+        background-color: rgb(49, 48, 48);
+        color: grey;
+        padding: 50px;
+        position: relative;
+      }
+
+      #footer {
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        right: 0;
+        background-color: black;
+      }
+
+      #row-dark .h6 {
+        color: white;
+      }
 
     </style>
   </head>
   <body>
-
     <script src="js/jquery-3.6.0.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <table class="table table-striped">
-      <tr>
-        <td>
-          <p class="text-capitalize" style="font-size: smaller">
-            how now
-          </p>
-        </td>
-      </tr>
 
-      <tr>
-        <td>
-          <p class="text-capitalize" style="font-size: smaller">
-            time to think
-          </p>
-        </td>
-      </tr>
+    <div id="main-container" class="container-fluid">
+      <div id="row-1 justify-content-start" class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+            <p class="display-6">My Website</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none"><p>Home</p></div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Portfolio</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Staff</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Features</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Blog</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Contact</p>
+          </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <p class="text-muted">Download</p>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 d-lg-none">
+            <img src="Images/menu.png" class="d-inline" alt="pic" />
+            <p class="h1 d-inline">Menu</p>
+          </div>
+        </div>
+      </div>
 
-      <tr>
-        <td>
-          <p class="text-capitalize" style="font-size: smaller">
-            a walk in the park
-          </p>
-        </td>
-      </tr>
+      <div id="row-2" class="container-fluid">
+        <img
+          id="hero"
+          class="img-fluid"
+          src="images/hero.jpg"
+          alt="try again, dipshit"
+        />
+      </div>
 
-      <tr>
-        <td>
-          <p class="text-capitalize" style="font-size: smaller">
-            Adrift by simon christen
-          </p>
-        </td>
-      </tr>
+      <div id="row-3" class="container">
+        <div class="row">
+          <div class="col-lg-3 col-xs-12">
+            <img class="d-block mx-auto" src="Images/icon-1.png" alt="image" />
+            <p class="h5 text-center">Purpose</p>
+            <p class="text-center text-muted" style="font-size: smaller">
+              Vestibulum sapien nisi, suscipit vitae, euismod vitae, imperdiet
+              eget est. Etiam tinidunt tempus.
+            </p>
+          </div>
 
-      <tr>
-        <td>
-          <p class="text-capitalize" style="font-size: smaller">
-            how now
+          <div class="col-lg-3 col-xs-12">
+            <img class="d-block mx-auto" src="Images/icon-2.png" alt="image" />
+            <p class="h5 text-center">Quality</p>
+            <p class="text-center text-muted" style="font-size: smaller">
+              Nam comodo risus pharetra magna egestas, nec iaculis augue
+              lobortis. Proin eleifend enim quis.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-xs-12">
+            <img class="d-block mx-auto" src="Images/icon-3.png" alt="image" />
+            <p class="h5 text-center">Function</p>
+            <p class="text-center text-muted" style="font-size: smaller">
+              Aenean et tellus id nisi vehicula fringilla. In condimentum dui eu
+              turpis mollis turpis suscipit.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-xs-12">
+            <img class="d-block mx-auto" src="Images/icon-4.png" alt="image" />
+            <p class="h5 text-center">Elegant</p>
+            <p class="text-center text-muted" style="font-size: smaller">
+              Mauris acumsan magna in placerat lacinia. Proin sit amet neque
+              vitae nunc pulvinar varius.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="row-4" class="container justify-content-between">
+        <div id="recentWork" class="row">
+          <p id="RW" class="h6" style="font-weight: bold">RECENT WORK</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <img
+              src="Images/bike-200x170.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            />
+            <p class="h6" style="font-weight: bolder">Green Bike</p>
+            <p class="text-muted" style="font-size: smaller">
+              Beautiful, Travel
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <img
+              src="Images/surf-200x170.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            />
+            <p class="h6" style="font-weight: bolder">Salt of the Earth</p>
+            <p class="text-muted" style="font-size: smaller">
+              Beautiful, Travel
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <img
+              src="Images/hills-200x170.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            />
+            <p class="h6" style="font-weight: bolder">Mountain High</p>
+            <p class="text-muted" style="font-size: smaller">Travel</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <img
+              src="Images/path-200x170.jpg"
+              alt="photo"
+              class="d-block mr-auto"
+            />
+            <p class="h6" style="font-weight: bolder">When a Tree Falls</p>
+            <p class="text-muted" style="font-size: smaller">Beautiful</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="row-5" class="container justify-content-between">
+        <div id="FTB" class="row">
+          <p id="fromTheBlog" class="h6" style="font-weight: bold">
+            FROM THE BLOG
           </p>
-        </td>
-      </tr>
-    </table>
-    
-  
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-xs-12">
+            <img
+              src="Images/cow-300x255.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            /><br />
+            <p class="h6" style="font-weight: bolder">How Now</p>
+            <p class="text-muted" style="font-size: smaller">
+              Posted on October 28, 2020
+            </p>
+            <p class="text-muted" style="font-size: smaller">
+              Proin et ligula laoreet, vestibulum orci nec,eleifend purus.
+              Quisque ullacorpem sem at ipsum elementum laoreet. Integer
+              egestas...
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-xs-12 ">
+            <img
+              src="Images/sunrise-300x159.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            /><br />
+            <p class="h6" style="font-weight: bolder">
+              Adrift by Simon Christen
+            </p>
+            <p id="p1" class="text-muted" style="font-size: smaller">
+              Posted on September 29, 2020
+            </p>
+            <p class="text-muted" style="font-size: smaller">
+              Morbi vulputate egestas sam, en cursus lugulla umllamcorper non.
+              Culabitur tristique velum en mauris venenatis egestas. Phasellus
+              bibendum...
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-xs-12">
+            <img
+              src="Images/grass-300x255.jpg"
+              alt="photo"
+              class="d-block ml-auto"
+            /><br />
+            <p class="h6" style="font-weight: bolder">A walk in the Park</p>
+            <p class="text-muted" style="font-size: smaller">
+              Posted on August 10, 2020
+            </p>
+            <p class="text-muted" style="font-size: smaller">
+              Proin elementum phraetra mauris sed semper. Cras lorem arcu,
+              vulputate ut malesuadaut, tincidunt. Etiam adisciping...
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="row-dark">
+          <div class="col-lg-4 col-xs-12">
+            <p class="h6" style="font-weight: bolder">My Website</p>
+            <br />
+            <p style="font-size: smaller">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English.
+            </p>
+          </div>
+          <div class="col-lg-4 col-xs-12">
+            <p class="h6" style="font-weight: bolder">Recent Posts</p>
+            <br />
+            <p class="text-capitalize" style="font-size: smaller">how now</p>
+            <p class="text-capitalize" style="font-size: smaller">
+              time to think
+            </p>
+            <p class="text-capitalize" style="font-size: smaller">
+              a walk in the park
+            </p>
+            <p class="text-capitalize" style="font-size: smaller">
+              Adrift by simon christen
+            </p>
+            <p class="text-capitalize" style="font-size: smaller">how now</p>
+          </div>
+          <div class="col-lg-4 col-xs-12
+          
+          
+          
+          
+          
+          
+          
+          
+          ">
+            <p class="h6" style="font-weight: bolder">Recent Work</p>
+            <br />
+            <p class="text-capitalize" style="font-size: smaller">beautiful</p>
+            <p class="text-capitalize" style="font-size: smaller">travel</p>
+            <p class="text-capitalize" style="font-size: smaller">surreal</p>
+            <p class="text-capitalize" style="font-size: smaller">thoughts</p>
+            <p class="text-capitalize" style="font-size: smaller">unique</p>
+          </div>
+
+          <div class="row" id="footer">
+            <p class="text-center">&copy; 2020 ITAcademy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
