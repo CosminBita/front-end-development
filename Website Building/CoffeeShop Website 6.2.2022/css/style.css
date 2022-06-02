@@ -1,0 +1,71 @@
+
+body {
+    font-family: Anton, sans-serif;
+}
+
+/***********************************HEADER***********************************************/
+
+#header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header a {
+  color: white;
+  margin-left: 24px;
+  font-size: 0.7rem;
+}
+
+header a:hover {
+  color: bisque;
+}
+
+/*********************************HERO SECTION*******************************************/
+#hero {
+  background-image: url(../imgs/coffee-shop-15.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background: #4133329c;
+  height: 100vh;
+}
+
+#hero-logo {
+  width: 200px;
+}
+
+#arrow-down {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  width: 46px;
+  height: 40px;
+  border: solid 2px white;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+#arrow-down::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-right: solid 2px white;
+  border-bottom: solid 2px white;
+  left: 0;
+  right: 0;
+  top: 5px;
+  margin: 0 auto;
+  transform: rotate(45deg);
+}
