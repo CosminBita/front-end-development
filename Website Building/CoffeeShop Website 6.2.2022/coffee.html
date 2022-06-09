@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -27,13 +28,16 @@
               COFFEE HOUSE
             </h3>
           </div>
-          <div class="col-8 text-end">
+          <div class="d-none d-md-block col-8 text-end">
             <a class="text decoration none text-uppercase" href="#">About</a>
             <a class="text decoration none text-uppercase" href="#">Contact</a>
             <a class="text decoration none text-uppercase" href="#">Products</a>
             <a class="text decoration none text-uppercase" href="#"
               >How to find us?</a
             >
+          </div>
+          <div class="d-md-none col-8 text-end">
+            <img src="imgs/menu.png"  id="menu" alt="menu">
           </div>
         </div>
       </div>
@@ -55,7 +59,207 @@
         </div>
       </div>
 
-      <a href="#intro-section" id="arrow-down" alt="see more"></a>
+      <a href="#intro" id="arrow-down" alt="see more"></a>
     </section>
+
+    <section id="intro" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-10 col-xl-6 text-center py-5">
+            <h1 class="text-capitalize">the best coffee in the world</h1>
+            <p class="text-muted lead">
+              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
+              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
+              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
+              Possimus vero recusandae praesentium labore.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-5">
+          <div class="col-sm-4 text-center">
+            <img
+              src="imgs/coffeeBean.jpg"
+              class="rounded-circle py-3"
+              alt="icon-1"
+            />
+            <p>Best Beans</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <img src="imgs/milk.jpg" class="rounded-circle py-3" alt="icon-2" />
+            <p class="text-capitalize">fresh from the titty</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <img
+              src="imgs/blender.jpg"
+              class="rounded-circle py-3"
+              alt="icon-3"
+            />
+            <p>Swiss Technology</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 col-md-5 offset-md-1 align-self-center p-5">
+            <h2 class="text-capitalize">great beans</h2>
+            <p class="text-muted">
+              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
+              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
+              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
+              Possimus vero recusandae praesentium labore.
+            </p>
+            <button class="btn btn-primary">Find out more</button>
+          </div>
+          <div class="d-none d-md-block col-md-5 offset-md-1" id="about-bg1"></div>
+        </div>
+        <div class="row text-light" id="about-bg2">
+          <div class="col-md-6 col-12 text-light align-self-center">
+            <h2 class="text-capitalize">best coffee</h2>
+            <p>
+              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
+              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
+              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
+              Possimus vero recusandae praesentium labore.
+            </p>
+            <button class="btn btn-primary">Find out more</button>
+          </div>
+          <div class="d-none d-md-block col-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="container-fluid py-5">
+        <h2 class="text-center">SELECTION FROM OUR MENU</h2>
+      </div>
+      <div class="container-fluid">
+        <div class="row py-3">
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/espresso 1.png"
+              class="rounded-circle"
+              alt="espresso"
+            />
+            <h4 class="py-2">Espresso</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/cup-of-black-coffee1 2.png"
+              class="rounded-circle"
+              alt="coffee"
+            />
+            <h4 class="py-2">Capuccino</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/greenTea 1.png"
+              class="rounded-circle"
+              alt="green tea"
+            />
+            <h4 class="py-2">Green Tea</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div class="row py-3">
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/OJ 1.png"
+              class="rounded-circle"
+              alt="OJ"
+            />
+            <h4 class="py-2">Orange Juice</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/biscotti 1.png"
+              class="rounded-circle"
+              alt="biscotti"
+            />
+            <h4 class="py-2">Biscotti</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <img
+              src="imgs/Frapuccino.png"
+              class="rounded-circle"
+              alt="green tea"
+            />
+            <h4 class="py-2">Green Tea</h4>
+            <p class="text-muted">
+              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
+              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-info">
+      <div class="container-fluid">
+        
+        <div class="row" id="contact-info-bg1">
+          <div class="col-md-5 offset-md-1 text-light p-4">
+            <h2>YOU ARE WELCOME</h2>
+            <p>COME ON IN!</p>
+            <br>
+            <h4>WEEKDAYS</h4>
+            <p>8AM - 12AM</p>
+            <br>
+            <h4>WEEKENDS</h4>
+            <p>8AM - 2AM</p>
+          </div>
+          <div class="col-md-5 text-light p-4" id="col-contact">
+            <h2>CONTACT</h2>
+            <br>
+            <h4>PHONE</h4>
+            <p>212-382-9938</p>
+            <br>
+            <h4>EMAIL</h4>
+            <p>coffeeshop@gmail.com</p>
+            <br>
+            <h4>ADDRESS</h4>
+            <p>28-03 34th Street, Astoria, NY 11103</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid text-light">
+        <div class="row">
+          <div class="col-md-5 offset-md-1 p-2 align-self-center">
+            <p>Coffee Shop | &copy; 2020 All rights reserved</p>
+          </div>
+          <div class="col-md-5 p-2 text-end" id="social">
+            <a href="#"><img src="imgs/facebook logo_icon.png" alt="facebook icon"></a>
+            <a href="#"><img src="imgs/twitter logo_icon.png" alt="twitter icon"></a>
+            <a href="#"><img src="imgs/tumblr logo_icon.png" alt="tumblr icon"></a>
+            <a href="#"><img src="imgs/linkedin logo_icon.png" alt="linkedin icon"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
