@@ -8,13 +8,12 @@
     <title>Website Assignment</title>
     <style>
       #row-2 {
-        width: 100vw;
+        width: 100%;
         position: relative;
         padding: 0;
         margin: 0 auto;
-        text-align: center;
       }
-      #row-2:before {
+      #row-2::before {
         position: absolute;
         top: 70px;
         left: 170px;
@@ -106,11 +105,11 @@
         </div>
       </div>
 
-      <div id="row-2" class="container-fluid justify-content-center">
+      <div id="row-2" class="container-fluid">
         <div class="col-12">
         <img
           id="hero"
-          class="img-fluid"
+          class="img-fluid mx-auto d-block"
           src="Images/hero.jpg"
           alt="img_hero"
         />
