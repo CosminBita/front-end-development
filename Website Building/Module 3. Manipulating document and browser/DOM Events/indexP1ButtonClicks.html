@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Part 1 - Button Clicks</title>
+  </head>
+  <body>
+    <!-- LINEAR JS, IT WORKS BUT NOT RECOMMENDED:-->
+    <button onclick="alert('You clicked me!');">Primitive Button!</button>
+
+    <br />
+    <br />
+
+    <button id="JS-button">eventJSbuttonBasic</button>
+
+    <br>
+    <br>
+
+    <button id="JS-button-advanced">eventJSbuttonAdvanced</button>
+
+    <br>
+    <br>
+
+    <button id="removing-event">Removing Event Button</button>
+
+    <script>
+
+      //ONE WAY TO CREATE BUTTON EVENT IN JS:
+      var JSbutton = document.getElementById("JS-button");
+      JSbutton.onclick = displayMessage;
+      JSbutton.onclick = displayAnotherMessage;
+      function displayMessage() {
+        alert("hello, soybois");
+      }
+      function displayAnotherMessage() {
+        alert("hello again, losers");
+      }
+      //THIS APPROACH IS LIMITED, BECAUSE ONLY ONE EVENT IS SELECTED, THE MOST RECENT
+
+      //THE ADVANCED APPROACH ALLOWS MORE THAN ONE EVENT:
+
+      var JSadvanced = document.getElementById('JS-button-advanced');
+      JSadvanced.addEventListener('click', message1);
+      JSadvanced.addEventListener('click', message2);
+      function message1(){
+        alert('hola, maricones');
+      }
+      function message2(){
+        alert('hola, putos y putas');
+      }
+
+      //HOW TO REMOVE EVENT IN FUNCTION (NOTE THAT LINE IS EXECUTED ONCE, THEN IT STOPS):
+      var removeEvent = document.getElementById('removing-event');
+      removeEvent.addEventListener('click', message);
+      function message(){
+        alert('hello world');
+        removeEvent.removeEventListener('click', message);
+      }
+
+
+    </script>
+  </body>
+</html>

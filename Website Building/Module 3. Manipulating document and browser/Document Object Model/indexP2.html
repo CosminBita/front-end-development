@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model P2</title>
+
+    <style>
+        .blue-text {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="my-paragraph" class="my-class">Text 1</p>
+    <br>
+    <br>
+    <br>
+    <input type="text" id="firstname" name="first-name" value="I want to be a button!">
+    
+    <script>
+    var paragraph = document.getElementById('my-paragraph');
+    console.log('The original paragraph text was: ' + paragraph.innerHTML + "\n");
+    paragraph.innerHTML = 'This is the new text defined in JS, check the live server.'
+
+    console.log('ID: ' + paragraph.id );
+    console.log('Class: ' + paragraph.className);
+
+
+    var input = document.getElementById("firstname");
+    input.setAttribute("type", "button");
+    /*input.style.color = 'blue';*/
+
+    input.classList.add('blue-text');
+    //input.classList.remove('blue-text');
+
+    </script>
+</body>
+</html>

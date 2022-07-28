@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events Part 2</title>
+    <style>
+      #my-div {
+        height: 300px;
+        color: white;
+        font: sans-serif;
+        background-color: blueviolet;
+        text-align: center;
+        line-height: 300px;
+        font-size: 28px;
+      }
+      #my-second-div {
+        height: 300px;
+        color: white;
+        font: sans-serif;
+        background-color: rgb(223, 64, 64);
+        text-align: center;
+        line-height: 300px;
+        font-size: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="my-second-div">Event Counter</div>
+    <br />
+    <br />
+    <br />
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <script>
+         /*TO MAKE FUNCTION WORK WHEN BUTTON IS BELOW SCRIPT - window.addEventListener ('load, function()):
+
+         window.addEventListener("load", function () {
+           var button = document.getElementById("my-button");
+           button.addEventListener("click", message);
+         });
+
+         function message() {
+           alert("Hello, JS Events!");
+         }
+
+           ***************************OR**************************************
+
+           window.addEventListener ('DOMContentLoaded', function()) - this refers only to DOM tree,
+           does not wait for external resources like styling to load:
+
+         window.addEventListener("DOMContentLoaded", function () {
+           var button = document.getElementById("my-button");
+           button.addEventListener("click", message);
+         });
+
+         function message() {
+           alert("Hello, JS enthusiasts!");
+         }
+
+          ****************************OR**************************************
+         */
+         document.addEventListener("readystatechange", function () {
+           if (document.readyState === "interactive") {
+             //INSTEAD OF INTERACTIVE YOU CAN TYPE COMPLETE, IN WHICH CASE IT REFERS TO ENTIRE DOCUMENT, INCLUDING EXTERNAL SOURCES
+             var button = document.getElementById("my-button");
+             button.addEventListener("click", message);
+           }
+         });
+
+         function message() {
+           alert("Hello, JS enthusiasts!");
+         }
+
+         //******************************MOUSE EVENTS ON #MY-DIV**********************
+
+         document.addEventListener("readystatechange", function () {
+           if (document.readyState === "complete") {
+             var div = document.getElementById("my-div");
+             div.addEventListener("click", divmsg);
+           }
+         });
+         function divmsg() {
+           alert("You have clicked the div!");
+         }
+
+         document.addEventListener("readystatechange", function () {
+           if (document.readyState === "complete") {
+             var div = document.getElementById("my-div");
+             div.addEventListener("mouseenter", function () {
+               div.innerHTML = "The mouse has entered the div area.";
+             });
+             div.addEventListener("mouseleave", function () {
+               div.innerHTML = "The mouse has left the div area.";
+             });
+           }
+         });
+
+
+         //***************************WORKING ON MY-SECOND-DIV, EVENT COUNTER**************************
+
+      var secondDiv = document.getElementById('my-second-div');
+      let eventCounter = 0;
+      secondDiv.addEventListener('mousemove', function() {
+      secondDiv.innerHTML = 'The mouse moved inside the div ' + eventCounter;
+      eventCounter++;
+      });
+
+         //***************************KEYDOWN FUNCTION**************************************************
+
+         document.addEventListener('keydown', function(e){
+           console.log(e.key);
+         })
+
+         //***************************THE TARGET FUNCTION*************************************************
+
+         document.addEventListener('click', function(e){
+           console.log(e.target); //ANYTHING YOU CLICK ON THE SCREEN, IT DISPLAYS ITS CODE IN CONSOLE
+         })
+
+         //*************************TARGET FUNCTION ALERT*************************************************
+
+         var items = document.getElementsByTagName('li');
+         for(let i=0; i < items.length; i++) {
+         items[i].addEventListener('click', function(e){
+          alert(e.target.innerHTML);
+         }
+         )
+         }
+    </script>
+
+    <button id="my-button">Click me!</button>
+    <br />
+    <br />
+    <br />
+    <div id="my-div">Hello, I am div. You can click me!</div>
+  </body>
+</html>

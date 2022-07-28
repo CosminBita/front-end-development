@@ -4,262 +4,357 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@1,100&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <title>Coffee Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <script src="js/jquery-3.6.0.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <div id="mobile-menu">
+      <a id="close-button" href="#"
+        ><img src="imgs/close-button.png" alt="close" class="img-fluid"
+      /></a>
+      <div class="container">
+        <div class="row align-items-center vh-100">
+          <div class="col-12 text-center">
+            <nav>
+              <div>
+                <a
+                  href="#about-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >about</a
+                >
+              </div>
+              <div class="my-3">
+                <a
+                  href="#contact-info-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >contact</a
+                >
+              </div>
+              <div class="mb-3">
+                <a
+                  href="#menu-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >products</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#map-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >how to find us?</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <header id="header" class="text-light p-3">
+    <header id="header" class="p-3">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
-            <h3
-              style="font-family: 'Courier New', Courier, monospace font-weight: bolder;"
-            >
-              COFFEE HOUSE
-            </h3>
-          </div>
+          <div class="col-4 text-uppercase text-light fw-bold">Coffee Shop</div>
           <div class="d-none d-md-block col-8 text-end">
-            <a class="text decoration none text-uppercase" href="#">About</a>
-            <a class="text decoration none text-uppercase" href="#">Contact</a>
-            <a class="text decoration none text-uppercase" href="#">Products</a>
-            <a class="text decoration none text-uppercase" href="#"
-              >How to find us?</a
+            <a href="#about-section" class="text-decoration-none text-uppercase"
+              >about</a
+            >
+            <a
+              href="#contact-info-section"
+              class="text-decoration-none text-uppercase"
+              >contact</a
+            >
+            <a href="#menu-section" class="text-decoration-none text-uppercase"
+              >products</a
+            >
+            <a href="#map-section" class="text-decoration-none text-uppercase"
+              >how to find us?</a
             >
           </div>
           <div class="d-md-none col-8 text-end">
-            <img src="imgs/menu.png"  id="menu" alt="menu">
+            <a href="#" id="menu-bar"
+              ><img
+                id="circleMenu"
+                src="imgs/circle-menu-icon-png-vector-pixsector-menu-vector-png-560_560.png"
+                alt="menu"
+            /></a>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="hero">
-      <div class="container-fluid text-light">
-        <div class="row vh-100 align-items-center p-5">
-          <div class="col-12 text-center">
+    <section id="hero-section">
+      <div class="container-fluid">
+        <div class="row vh-100 align-items-center pb-5">
+          <div class="col-12 text-center text-light">
             <img
-              id="hero-logo"
+              id="logo"
+              src="imgs/coffeeShopLogo.jpg"
               class="rounded-circle"
-              src="imgs/coffee-best-quality-logo-vector_.jpg"
-              alt="logo"
+              alt="not working"
             />
-            <h1 class="display-2" style="font-weight: bold">House of Coffee</h1>
-            <p class="lead">Best Goddamn Coffee In Your Neighborhood</p>
-          </div>
-        </div>
-      </div>
-
-      <a href="#intro" id="arrow-down" alt="see more"></a>
-    </section>
-
-    <section id="intro" class="py-5">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-10 col-xl-6 text-center py-5">
-            <h1 class="text-capitalize">the best coffee in the world</h1>
-            <p class="text-muted lead">
-              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
-              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
-              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
-              Possimus vero recusandae praesentium labore.
+            <h1 class="display-2 fw-bold">THE HOME OF COFFEE</h1>
+            <p class="lead">
+              Our tradition in making excellent goddamn cofee goes back seven
+              generations. It all started in 1589 with slaves and a bit of good
+              old fashioned whipping.
             </p>
           </div>
         </div>
+      </div>
+      <a id="arrow-down" href="#intro-section"></a>
+    </section>
 
+    <section id="intro-section" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-10 text-center">
+            <h1 class="text-uppercase fw-bold">home of the roasted coffee</h1>
+            <p class="lead">
+              Since the beginning of time, humans had to quickly wake up to the
+              smell of coffee. If they were sleepy when stepping out of their
+              caves, the dinosaurs would eat them. So, after banging their
+              primitive females during morning glory, they had them make coffee.
+              And here we are today. No dinosaurs, but bitches and coffee are
+              still around.
+            </p>
+          </div>
+        </div>
         <div class="row justify-content-center py-5">
           <div class="col-sm-4 text-center">
             <img
+              class="img-fluid py-3 rounded-circle"
               src="imgs/coffeeBean.jpg"
-              class="rounded-circle py-3"
-              alt="icon-1"
+              alt="coffee beans"
             />
-            <p>Best Beans</p>
-          </div>
-          <div class="col-sm-4 text-center">
-            <img src="imgs/milk.jpg" class="rounded-circle py-3" alt="icon-2" />
-            <p class="text-capitalize">fresh from the titty</p>
+            <p class="h4 text-uppercase fw-bold">Best Beans</p>
           </div>
           <div class="col-sm-4 text-center">
             <img
-              src="imgs/blender.jpg"
-              class="rounded-circle py-3"
-              alt="icon-3"
+              class="img-fluid py-3 rounded-circle"
+              src="imgs/milk.jpg"
+              alt="milk"
             />
-            <p>Swiss Technology</p>
+            <p class="h4 text-uppercase fw-bold">Quality Milk</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <img
+              class="img-fluid py-3 rounded-circle"
+              src="imgs/blender.jpg"
+              alt="blender"
+            />
+            <p class="h4 text-uppercase fw-bold">Professional Blend</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about-section">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-10 col-md-5 offset-md-1 align-self-center p-5">
-            <h2 class="text-capitalize">great beans</h2>
-            <p class="text-muted">
-              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
-              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
-              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
-              Possimus vero recusandae praesentium labore.
+          <div class="col-12 col-md-5 offset-md-1 align-self-center p-5">
+            <h2 class="text-uppercase">great place</h2>
+            <p class="lead text-capitalize">
+              this is where all of your coffee dreams come true. our waitresses
+              will make you come in your pants.
             </p>
-            <button class="btn btn-primary">Find out more</button>
+            <button class="btn btn-danger">Find out more</button>
           </div>
-          <div class="d-none d-md-block col-md-5 offset-md-1" id="about-bg1"></div>
+          <div
+            id="about-bg-1"
+            class="d-none d-md-block col-md-5 offset-md-1"
+          ></div>
         </div>
-        <div class="row text-light" id="about-bg2">
-          <div class="col-md-6 col-12 text-light align-self-center">
-            <h2 class="text-capitalize">best coffee</h2>
-            <p>
-              Sint et beatae beatae deserunt et rerum. Ex architecto veritatis
-              omnis quo quibusdam molestiae consequuntur. Id inventore mollitia
-              culpa magnam voluptate quos. Quis dolorum quas et exercitationem.
-              Possimus vero recusandae praesentium labore.
+        <div class="row" id="about-bg-2">
+          <div class="col-12 col-md-6 align-self-center">
+            <h2 class="text-light">FRESH BEANS</h2>
+            <p class="text-light">
+              Drink it, make sure you tip and then get the fuck outta here.
             </p>
-            <button class="btn btn-primary">Find out more</button>
+            <button class="btn btn-danger">Find out more</button>
           </div>
-          <div class="d-none d-md-block col-6"></div>
+          <div class="col-0 col-md-6"></div>
         </div>
       </div>
     </section>
 
-    <section id="menu">
-      <div class="container-fluid py-5">
-        <h2 class="text-center">SELECTION FROM OUR MENU</h2>
-      </div>
-      <div class="container-fluid">
-        <div class="row py-3">
-          <div class="col-md-4 col-sm-6 text-center">
-            <img
-              src="imgs/espresso 1.png"
-              class="rounded-circle"
-              alt="espresso"
-            />
-            <h4 class="py-2">Espresso</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
+    <section id="menu-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center py-5">
+            <h1>SELECTION FROM OUR MENU</h1>
+            <p class="muted lead">
+              Below you will find our most popular items, buy one show us your
+              tits for free.
             </p>
           </div>
-          <div class="col-md-4 col-sm-6 text-center">
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 text-center">
             <img
-              src="imgs/cup-of-black-coffee1 2.png"
+              src="imgs/capuccino 1.png"
+              alt="capuccino"
               class="rounded-circle"
-              alt="coffee"
             />
-            <h4 class="py-2">Capuccino</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
-            </p>
+            <h2>Capuccino</h2>
+            <p class="lead my-3">Straight from the titty</p>
+            <p class="h3">$5</p>
           </div>
-          <div class="col-md-4 col-sm-6 text-center">
+          <div class="col-sm-6 col-md-4 text-center">
             <img
               src="imgs/greenTea 1.png"
-              class="rounded-circle"
               alt="green tea"
-            />
-            <h4 class="py-2">Green Tea</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
-            </p>
-          </div>
-        </div>
-        <div class="row py-3">
-          <div class="col-md-4 col-sm-6 text-center">
-            <img
-              src="imgs/OJ 1.png"
               class="rounded-circle"
-              alt="OJ"
             />
-            <h4 class="py-2">Orange Juice</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
-            </p>
+            <h2>Green Tea</h2>
+            <p class="lead my-3">Straight from the leaf's nipple</p>
+            <p class="h3">$3</p>
           </div>
-          <div class="col-md-4 col-sm-6 text-center">
+          <div class="col-sm-6 col-md-4 text-center">
+            <img src="imgs/OJ 1.png" alt="OJ" class="rounded-circle" />
+            <h2>Orange Juice</h2>
+            <p class="lead my-3">Freshly squeezed</p>
+            <p class="h3">$8</p>
+          </div>
+          <div class="col-4 text-center">
             <img
               src="imgs/biscotti 1.png"
-              class="rounded-circle"
               alt="biscotti"
+              class="rounded-circle"
             />
-            <h4 class="py-2">Biscotti</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
-            </p>
+            <h2>Biscotti</h2>
+            <p class="lead my-3">Baked in the back, by our homeless employee</p>
+            <p class="h3">$4</p>
           </div>
-          <div class="col-md-4 col-sm-6 text-center">
+          <div class="col-4 text-center">
+            <img
+              src="imgs/espresso 1.png"
+              alt="espresso"
+              class="rounded-circle"
+            />
+            <h2>Espresso</h2>
+            <p class="lead my-3">
+              Espresso express, drink it now! Drink like you mean it.
+            </p>
+            <p class="h3">$6</p>
+          </div>
+          <div class="col-4 text-center">
             <img
               src="imgs/Frapuccino.png"
+              alt="frapucino"
               class="rounded-circle"
-              alt="green tea"
             />
-            <h4 class="py-2">Green Tea</h4>
-            <p class="text-muted">
-              Minus rerum ab asperiores porro nemo nihil vel. Nihil sit rem
-              praesentium quaerat aperiam doloremque distinctio reprehenderit.
-            </p>
+            <h2>Frapucino</h2>
+            <p class="lead my-3">Straight from Dunkin Donuts, we resell it.</p>
+            <p class="h3">$9</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact-info">
+    <section id="contact-info-section">
       <div class="container-fluid">
-        
-        <div class="row" id="contact-info-bg1">
-          <div class="col-md-5 offset-md-1 text-light p-4">
-            <h2>YOU ARE WELCOME</h2>
-            <p>COME ON IN!</p>
-            <br>
-            <h4>WEEKDAYS</h4>
-            <p>8AM - 12AM</p>
-            <br>
-            <h4>WEEKENDS</h4>
-            <p>8AM - 2AM</p>
+        <div class="row text-light" id="contact-info-bg-1">
+          <div class="col-md-5 offset-md-1 p-5">
+            <h2 class="text-uppercase">welcome</h2>
+            <p>Come on in!</p>
+            <br />
+            <h4 class="text-uppercase">week days</h4>
+            <p>8am-6pm</p>
+            <br />
+            <h4 class="text-uppercase">weekends</h4>
+            <p>10am-6pm</p>
           </div>
-          <div class="col-md-5 text-light p-4" id="col-contact">
+          <div class="col-md-6 p-5" id="contact-info-bg-2">
             <h2>CONTACT</h2>
-            <br>
-            <h4>PHONE</h4>
-            <p>212-382-9938</p>
-            <br>
-            <h4>EMAIL</h4>
-            <p>coffeeshop@gmail.com</p>
-            <br>
-            <h4>ADDRESS</h4>
-            <p>28-03 34th Street, Astoria, NY 11103</p>
+            <br />
+            <h4 class="text-uppercase">address</h4>
+            <p>Your Mom's Ave nr. 69</p>
+            <br />
+            <h4 class="text-uppercase">phone</h4>
+            <p>1-800-go-fuckyourself</p>
+            <br />
+            <h4 class="text-uppercase">email</h4>
+            <p>gulagchupacabra@gmail.com</p>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="'map-section"></section>
 
     <footer>
-      <div class="container-fluid text-light">
-        <div class="row">
-          <div class="col-md-5 offset-md-1 p-2 align-self-center">
-            <p>Coffee Shop | &copy; 2020 All rights reserved</p>
+      <div class="container-fluid py-3">
+        <div class="row text-light">
+          <div class="col-md-5 offset-1 align-self-center">
+            Coffee Shop | &copy 2020 All rights reserved
           </div>
-          <div class="col-md-5 p-2 text-end" id="social">
-            <a href="#"><img src="imgs/facebook logo_icon.png" alt="facebook icon"></a>
-            <a href="#"><img src="imgs/twitter logo_icon.png" alt="twitter icon"></a>
-            <a href="#"><img src="imgs/tumblr logo_icon.png" alt="tumblr icon"></a>
-            <a href="#"><img src="imgs/linkedin logo_icon.png" alt="linkedin icon"></a>
+          <div class="col-md-5 text-end mt-3" id="social-media">
+            <a href="#"
+              ><img src="imgs/linkedin logo_icon.png" alt="linkedin"
+            /></a>
+            <a href="#" class="mx-3"
+              ><img src="imgs/facebook logo_icon.png" alt="facebook"
+            /></a>
+            <a href="#" class="mr-3"
+              ><img src="imgs/twitter logo_icon.png" alt="twitter"
+            /></a>
+            <a href="#"><img src="imgs/tumblr logo_icon.png" alt="tumblr" /></a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      window.addEventListener("load", function () {
+        let menuBar = document.getElementById("menu-bar");
+        let closeBtn = document.getElementById("close-button");
+        let mobileMenu = document.getElementById("mobile-menu");
+        let mobileMenuItem =
+          document.getElementsByClassName("mobile-menu-item");
+
+        menuBar.addEventListener("click", function () {
+          mobileMenu.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", function () {
+          mobileMenu.style.display = "none";
+        });
+
+        for (let i = 0; i < mobileMenuItem.length; i++) {
+          mobileMenuItem[i].addEventListener("click", function () {
+            mobileMenu.style.display = "none";
+          });
+        }
+        //FOR HEADER:
+
+        let heroSection = document.getElementById("hero-section");
+        let heroSectionHeight = heroSection.clientHeight;
+
+        let header = document.getElementById("header");
+
+        document.addEventListener("scroll", function(){
+
+          if(document.documentElement.scrollTop > heroSectionHeight){
+            if(!header.classList.contains("solid-header")){
+              header.classList.add("solid-header");
+            }
+          } else {
+            if(header.classList.contains("solid-header")){
+              header.classList.remove("solid-header");
+            }
+          }
+        })
+
+
+      });
+    </script>
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

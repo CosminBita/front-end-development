@@ -1,61 +1,72 @@
 body {
-  font-family: Anton, sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
-/***********************************HEADER***********************************************/
+/********************************HEADER*****************************************/
 
-#header {
+header {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 1;
 }
-
 header a {
   color: white;
   margin-left: 24px;
-  font-size: 0.7rem;
+}
+header a:hover {
+  color: white;
+}
+header a:visited {
+  color: white;
 }
 
-header a:hover {
-  color: bisque;
+#circleMenu {
+  width: 70px;
 }
-#menu {
-  width: 32px;
+
+#menu-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+} 
+
+.solid-header {
+position: fixed;
+background-color: #c69572;
+transition: background-color 1s ease;
 }
-/*********************************HERO SECTION*******************************************/
-#hero {
+
+/*****************************HERO-SECTION***************************************/
+
+#hero-section {
   background-image: url(../imgs/coffee-shop-15.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
-
-#hero::before {
+#logo {
+  width: 256px;
+}
+#hero-section::before {
+  content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  content: "";
+  top: 0;
+  bottom: 0;
   background: #4133329c;
   height: 100vh;
 }
-
-#hero-logo {
-  width: 200px;
-}
-
 #arrow-down {
   position: absolute;
   bottom: 24px;
-  left: 0;
-  right: 0;
   width: 46px;
   height: 40px;
   border: solid 2px white;
   border-radius: 100%;
   margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 #arrow-down::before {
   position: absolute;
@@ -66,73 +77,55 @@ header a:hover {
   border-bottom: solid 2px white;
   left: 0;
   right: 0;
-  top: 5px;
+  top: 3px;
   margin: 0 auto;
   transform: rotate(45deg);
 }
 
-/************************************INTRO************************************************/
+/******************************************Intro-Section***********************************/
 
-#intro {
-  background-color: rgb(247, 244, 240);
+#intro-section {
+  background: #eae7de;
 }
 
-/**************************************ABOUT***********************************************/
+/******************************************About-section***********************************/
 
-#about-bg1 {
+#about-bg-1 {
   background-image: url(../imgs/bar.jpg);
-  min-height: 420px;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 480px;
   background-position: right;
 }
 
-#about-bg2 {
+#about-bg-2 {
   background-image: url(../imgs/coffee-cup.jpg);
-  min-height: 320px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
-  position: relative;
+  min-height: 640px;
+  background-position: left;
 }
 
-@media (max-width: 780px) {
-  #about-bg2::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    background: rgb(74, 51, 51, 0.4);
-  }
-  #about-bg2 {
-    color: white;
-  }
+/********************************************Menu-section***********************************/
+
+#menu-section {
+  background: #eae7de;
 }
 
-/***********************************MENU**************************************************/
+/********************************************Contact-info-section***************************/
 
-#menu {
-  background-color: rgb(247, 244, 240);
-}
-
-/*************************************CONTACT SECTION*************************************/
-
-#contact-info-bg1 {
-  background-image: linear-gradient(to right, #36313682, #36313682),
+#contact-info-bg-1 {
+  background: linear-gradient(to right, #36313782, #36313782),
     url(../imgs/OG-20-16.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#col-contact {
+#contact-info-bg-2 {
   background-color: #312423a8;
 }
 
-/*************************************MAP SECTION******************************************/
-
-/*************************************FOOTER***********************************************/
+/**************************************************Footer****************************************/
 
 footer {
   background-color: #312423;
@@ -141,11 +134,42 @@ footer {
 footer a img {
   width: 32px;
 }
-@media (max-width: 780px) {
+
+@media (max-width: 768px) {
   footer {
     text-align: center;
   }
-  #social {
+  #social-media {
     text-align: center !important;
   }
 }
+
+
+/************************************************Mobile-menu***************************************/
+
+#mobile-menu {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 2;
+background: #312423ed;
+display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: grey;
+}
+
+#close-button {
+  position: absolute;
+  top: 8px;
+  right: 23px;
+  width: 20px;
+}
+

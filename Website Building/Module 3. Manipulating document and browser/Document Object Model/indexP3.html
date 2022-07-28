@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model Part 3</title>
+
+    <style>
+      .blue-text {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="my-paragraph" class="blue-text my class">HTML paragraph</p>
+
+    <br>
+    <br>
+
+    <ol id = 'my-list'>
+        <li>Item one.</li>
+        <li>Item two.</li>
+        <li>Item three.</li>
+    </ol>
+
+    <script>
+      //CHANGING THE TITLE:  
+      document.title = "PART THREE MODULE 2";
+      
+      //CREATING A NEW ELEMENT IN JS:
+      var JSparagraph = document.createElement("p");
+      var text = document.createTextNode(
+        "This is a dynamically created paragraph in JS"
+      );
+      JSparagraph.appendChild(text);
+      document.body.appendChild(JSparagraph);
+     //OR IT CAN BE DONE LIKE THIS:
+     // JSparagraph.innerHTML = 'This is a dynamically created paragraph in JS.';
+     //document.write(JSparagraph.innerHTML);
+
+      //CHANGING THE ORDER OF THE EXISTING PARAGRAPHS:
+      var HtmlParagraph = document.getElementById('my-paragraph');
+      document.body.insertBefore(JSparagraph, HtmlParagraph);
+
+      //ELIMINATING AN ELEMENT:
+      var list = document.getElementById('my-list');
+      list.removeChild(list.children[0]);
+
+      //REPLACING AN ELEMENT WITH ANOTHER (USING THE ABOVE TWO PARAGRAPHS AS EXAMPLES):
+      document.body.replaceChild(JSparagraph, HtmlParagraph);
+      
+
+    </script>
+  </body>
+</html>

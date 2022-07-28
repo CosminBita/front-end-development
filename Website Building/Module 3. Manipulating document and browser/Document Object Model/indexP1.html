@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model Part 1</title>
+  </head>
+  <body>
+    <!--EXAMPLE ONE:
+        <div id="div-1">
+        <p id="p-1">Text 1</p>
+        <p id="p-2">Text 2</p>
+        <p>Text 3</p>
+      </div>-->
+
+    <!--EXAMPLE TWO:
+      <p id="my-class">Text 1</p>
+      <p class="my-class">Text 2</p>
+      <p class="my-class some-other-class">Text 3</p>
+      <p>Text 4</p>
+      <p>Text 5</p>
+      <p class="your-class">Text 6</p>
+     -->
+
+     <ul>
+        <li>Item 1</li>
+        <li id="my-id">Item 2</li>
+        <li>Item 3</li>
+     </ul>
+    <script>
+      /* EXAMPLE ONE:
+     window.document.title = "Hello World";
+
+      var paragraph = document.getElementById('p-1');
+      alert(paragraph.innerHTML);*/
+
+      /*EXAMPLE TWO:
+      var paragraphs = document.getElementsByClassName('my-class');
+      for(i=0; i<paragraphs.length; i++) {
+        console.log(paragraphs[i].innerHTML);
+      }*/
+
+     var items = document.getElementsByTagName('li');
+     console.log(items.length);
+     
+     var item = document.querySelector('#my-id');//IF I TTYPE 'LI' IN QUERYSELECTOR, IT WILL ONLY RETURN THE FIRST VALUE THAT MATCHES, IN THIS CASE ITEM 1.
+     console.log(item.innerHTML);
+     
+     var selAll = document.querySelectorAll('li');
+     console.log(selAll.length);
+
+
+    </script>
+  </body>
+</html>

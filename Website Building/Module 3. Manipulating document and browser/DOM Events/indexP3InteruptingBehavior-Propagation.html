@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Mode Part 3</title>
+    <style>
+
+#div1 {
+    width: 350px;
+    height: 350px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div2 {
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div3 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+    </style>
+</head>
+<body>
+
+    <a href="https://www.google.com/" id="the-link">Google</a>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+    <script>
+
+
+/**********************INTERUPTING THE INHERENT BEHAVIOR OF AN ELEMENT - PREVENT DEFAULT**************************
+
+var link = document.getElementById('the-link');
+document.addEventListener('click', function(e){
+    e.preventDefault();
+})*/
+
+//**********************CAPTURING, BUBBLING, PROPAGATION**********************************************
+
+var div1 = document.getElementById('div1');
+var div2 = document.getElementById('div2');
+var div3 = document.getElementById('div3');
+
+//EVENT PROCESSED DURING BUBBLING:
+
+div1.addEventListener('click', eventHandler);
+div2.addEventListener('click', eventHandler);
+div3.addEventListener('click', eventHandler);
+
+//EVENT PROCESSED DURING CAPTURING:
+
+div1.addEventListener('click', eventHandler, true);
+div2.addEventListener('click', eventHandler, true);
+div3.addEventListener('click', eventHandler, true);
+
+function eventHandler(e) {
+    console.log('Hello, my name is ' + this.id); //IF YOU WANT ONLY THE SPECIFIC ELEMENT CLICKED (I.E. DIV3)
+                                                 //SUBSTITUTE this.id with e.target.id
+    //e.stopPropagation(); - WOULD STOP CAPTURING + BUBBLING (PROPAGATION), SO IT WILL ONLY PROCESS THE FIRST EVENT LISTENER (DIV1)
+}
+    </script>
+</body>
+</html>

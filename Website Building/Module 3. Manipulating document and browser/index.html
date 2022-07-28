@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating Window in Web Browser</title>
+</head>
+<body>
+    <script>
+      /*  window.alert('Hello world')
+        window.console.log('Hello world')*/
+      
+        /*var myvariable = 'Hello world'
+        console.log(window.myvariable)**/
+
+        /*function sayHello(){
+            console.log('hello world')
+        }
+        window.sayHello()*/
+
+        let screenWidth = window.screen.width ;/*NO NEED TO USE WINDOW, IT IS GLOBAL*/
+        let screenAvailWidth = screen.availWidth;
+        let screenHeight = screen.height;
+        let screenAvailHeight = screen.availHeight;
+        let colorDepth = screen.colorDepth;
+
+        console.log (
+            'Screen width is: ' + screenWidth + '\n' +
+            'Screen available width is: ' + screen.availWidth + '\n'+
+            'Screen height is: ' + screenHeight + '\n' +
+            'Screen available height is: ' + screen.availHeight + '\n' +
+            'Color depth is: ' + screen.colorDepth + '\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '\n'
+            )
+
+         let href = window.location.href;
+         let hostname = location.hostname;
+         let pathname = location.pathname;
+         let protocol = location.protocol;
+
+         console.log (
+            'Hyperlink Reference: ' + href + '\n' +
+            'Hostname: ' + hostname + '\n' +
+            'Pathname: ' + pathname + '\n' +
+            'Protocol: ' + protocol + '\n' +
+            '\n' +
+            '\n' +
+            '\n' +
+            '\n'
+         )
+
+        var userConfirmation = window.confirm('You are about to unsubscribe');
+        if (userConfirmation) {
+            alert('bye bye, dipwad');
+        } else {
+            alert('glad you stayed');
+        }
+
+        var userName = window.prompt ('What is your name?', 'Your name');
+        if (userName !== null) {
+            alert('Hello, ' + userName);
+        } 
+
+        function sayHello() {
+            console.log('hello world');
+        }
+        window.sayHello(); // can be done without typing 'window' as well
+        
+    </script>
+</body>
+</html>
