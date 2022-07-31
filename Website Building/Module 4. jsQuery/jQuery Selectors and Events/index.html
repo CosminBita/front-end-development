@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors and Events</title>
+
+</head>
+<body>
+<h1 id="heading-1">This is heading.</h1>
+
+<p>Paragraph 1.</p>
+<p>Paragraph 2.</p>
+<p>Paragraph 3.</p>
+
+<p class='my-class some-other-class'>Paragraph 4.</p>
+<p class='my-class'>Paragraph 5.</p>
+<p>Paragraph 6.</p>
+<br>
+<br>
+<br>
+
+<section id='my-section'>
+    <h1 id='my-heading'>My Heading.</h1>
+    <p class='my-class'>First paragraph.</p>
+    <p class='my-class'>Second paragraph.</p>
+    <p>Third paragraph.</p>
+    <ul id='my-list'>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</section>
+
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $('#heading-1');
+        let heading = jQuery('#heading-1');
+        console.log(heading.text());
+
+        let paragraph = jQuery('p');
+        console.log(paragraph.length);
+        
+        let paragraphsClass = jQuery('.my-class');
+        console.log(paragraphsClass.length);
+
+        let allItems = jQuery('*');
+        console.log(allItems.length);
+        // jQuery can use ALL SELECTORS from CSS
+
+        let pseudoSelector = jQuery("p:first");
+        console.log(pseudoSelector.text());
+
+ /*****************************MY SECTION********************************/
+
+ let listFirstChild = jQuery('li:first-child'); //FIRST-CHILD
+ console.log(listFirstChild.text());
+
+ 
+
+ let listDaddy = jQuery('li:first-child').parent();  //PARENT
+ console.log(listDaddy.attr('id'));
+
+ 
+
+ let listChildParents = jQuery('li:first-child').parents(); //listing all the parents of an element PARENTS
+ listChildParents.each(function(){
+    console.log($(this).prop('nodeName')); //jQuery approach
+ });
+
+ 
+
+listChildParents.each(function(){
+    console.log(this.nodeName); //identical result with the above
+});
+
+
+
+let listChildParentsUntil = jQuery('li:first-child').parentsUntil('body'); //parentsUntil
+listChildParentsUntil.each(function(){
+    console.log(this.nodeName); //listing parents until a named element, where it is disrupted
+});
+
+
+
+let allChildrenP = jQuery('#my-section').children('p'); // children of type P CHILDREN
+allChildrenP.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+let allChildren = jQuery('#my-section').find('*'); //finding all children in my-section FIND
+allChildren.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+let siblings = jQuery('#my-list').siblings(); //finding all siblings SIBLINGS
+siblings.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+let nextSibling = jQuery('#my-heading').next(); // finding the next sibling NEXT
+nextSibling.each(function(){
+    console.log(this.nodeName);
+})
+
+
+
+let allNextSiblings = jQuery('#my-heading').nextAll(); //finding all next siblings nextAll
+allNextSiblings.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+let nextUntil = jQuery('#my-heading').nextUntil('ul'); //finding all next siblings until NextUntil
+nextUntil.each(function(){
+    console.log(this.nodeName);
+});
+
+//JUST LIKE NEXT, BUT FOR MOVING BACKWARDS, USE prev(), prevAll(), prevUntil
+
+
+
+
+let firstKid = jQuery('#my-section').children().first(); //selecting first child FIRST
+firstKid.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+let lastKid = jQuery('#my-section').children().last(); //selecting last child LAST
+lastKid.each(function(){
+    console.log(this.nodeName);
+});
+
+
+
+
+let childByIndex = jQuery('#my-section').children().eq(0); //selecting child by index EQ()
+childByIndex.each(function(){
+    console.log($(this).text());
+});
+
+
+
+
+let PchildByFilter = jQuery('#my-section').children().filter('p'); //filtering p-type children FILTER
+PchildByFilter.each(function(){
+    console.log($(this).text());
+});
+
+
+
+
+let childrenWithoutP = jQuery('#my-section').children().not('p'); //selecting children without p-type 
+childrenWithoutP.each(function(){
+    console.log($(this).text());
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

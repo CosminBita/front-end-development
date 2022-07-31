@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Manipulation</title>
+
+    <style>
+        .shown {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading1">This is heading 1.</h1>
+<br><br><br>
+<button id="method1-button">Show/HideMethod1</button>
+    <p id="method1-paragraph">
+      Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+      reprehenderit qui in ea voluptate velit esse quam. Esse cillum dolore eu
+      fugiat nulla pariatur. Facere possimus, omnis voluptas assumenda est,
+      omnis dolor repellendus. Inventore veritatis et quasi architecto beatae
+      vitae dicta sunt explicabo.
+    </p>
+    <br><br><br>
+
+    <button id="method2-button">Show/HideMethod2</button>
+    <p id="method2-paragraph">
+      Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+      reprehenderit qui in ea voluptate velit esse quam. Esse cillum dolore eu
+      fugiat nulla pariatur. Facere possimus, omnis voluptas assumenda est,
+      omnis dolor repellendus. Inventore veritatis et quasi architecto beatae
+      vitae dicta sunt explicabo.
+    </p>
+
+    <br><br><br>
+
+    <button id="method3-button">Show/HideMethod3</button>
+    <p id="method3-paragraph">
+      Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+      reprehenderit qui in ea voluptate velit esse quam. Esse cillum dolore eu
+      fugiat nulla pariatur. Facere possimus, omnis voluptas assumenda est,
+      omnis dolor repellendus. Inventore veritatis et quasi architecto beatae
+      vitae dicta sunt explicabo.
+    </p>
+
+    <br><br><br>
+
+    <button id="method4-button">Show/HideMethod4</button>
+    <p id="method4-paragraph">
+      Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+      reprehenderit qui in ea voluptate velit esse quam. Esse cillum dolore eu
+      fugiat nulla pariatur. Facere possimus, omnis voluptas assumenda est,
+      omnis dolor repellendus. Inventore veritatis et quasi architecto beatae
+      vitae dicta sunt explicabo.
+    </p>
+
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+
+    <script>
+      let textSize = $("#heading1").css("font-size"); //CSS METHOD
+      console.log("The font size of the heading is: " + textSize);
+
+
+      //METHOD 1:
+      let paragraphOne = $("#method1-paragraph");
+
+      paragraphOne.addClass("shown"); //ADD CLASS METHOD
+
+      $("#method1-button").click(function(){
+        if (paragraphOne.hasClass("shown")) { // HAS CLASS METHOD
+            paragraphOne.removeClass("shown"); //REMOVE CLASS METHOD
+            paragraphOne.addClass("hidden");
+        } else {
+            paragraphOne.addClass("shown");
+            paragraphOne.removeClass("hidden");
+        }
+      });
+
+
+     
+      //METHOD 2:
+      let paragraphTwo = $("#method2-paragraph");
+
+      $("#method2-button").click(function(){
+        paragraphTwo.toggleClass("hidden"); //TOGGLE CLASS METHOD (toggle class alternates the bitch)
+      });
+
+
+
+      //METHOD 3:
+      let paragraphThree = $("#method3-paragraph");
+
+      $("#method3-button").click(function(){
+        if(paragraphThree.css("display")=="none") { //CSS METHOD
+          paragraphThree.show();                   // SHOW METHOD
+        } else {
+          paragraphThree.hide();                   //HIDE METHOD
+        }
+      })
+
+     
+      //METHOD 4:
+      let paragraphFour = $("#method4-paragraph");
+
+      $("#method4-button").click(function(){
+        paragraphFour.toggle();                    //SIMPLEST - TOGGLE METHOD
+      })
+    </script>
+  </body>
+</html>

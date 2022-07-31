@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Events</title>
+  </head>
+  <body>
+    <button id="first-button">Click me</button>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+
+    <script>
+      jQuery("#first-button").click(function () {
+        alert("Button was clicked!");
+      });
+      //SAME AS THE EARLIER JS VERSION LEARNED:
+      let button = document.getElementById('first-button');
+      button.addEventListener("click", function () {
+        console.log("button was clicked");
+      });
+
+      //Clicking on a button that is created lower, document READY command in jQuery:
+      jQuery(document).ready(function () {
+        jQuery('#second-button').click(function () {
+          alert("Second button was clicked");
+        });
+      });
+      //SAME AS ABOVE CAN BE DONE BY USING 'ON':
+      jQuery(document).ready(function() {
+        jQuery('#third-button').on('click', function(){
+            alert('there you go, little buddy');
+        });
+      });
+
+      
+      
+      //Using ON for multiple events:
+      jQuery(document).ready(function(){
+
+        jQuery('#fourth-button').on({
+            mouseenter: function(){
+                console.log('mouse entered button');},
+            mouseleave: function(){
+                console.log('mouse left button');},
+            click: function(){
+                console.log('mouse has been clicked');}
+        });
+      });
+
+
+      //Using OFF to cancel events:
+      $(document).ready(function(){
+        $('#offButton').on('click', function(){
+            alert('The element was clicked!');
+            $(this).off();
+        });
+      });
+
+      //Using ONE button for only one execution:
+      $(document).ready(function(){
+        $('#oneButton').one('click', function(){
+            alert('One button clicked ONCE');
+        });
+      });
+    </script>
+    <br /><br /><br />
+    <div><button id="second-button">Click me too</button></div>
+
+    <br /><br /><br />
+
+    <div><button id="third-button">Now click here</button></div>
+
+    <br /><br /><br />
+
+    <div><button id="fourth-button">Button numero quatro</button></div>
+
+    <br /><br /><br />
+
+    <div><button id="offButton">Off Button</button></div>
+
+    <br /><br /><br />
+
+    <div><button id="oneButton">One Button</button></div>
+  </body>
+</html>

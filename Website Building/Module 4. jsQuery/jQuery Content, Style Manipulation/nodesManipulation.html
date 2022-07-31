@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes Manipulation</title>
+</head>
+<body>
+    <p id="my-paragraph">This is a paragraph, original text.</p>
+    <p id="my2-paragraph">This is another original text paragraph.</p>
+    
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $("#my-paragraph").append("*new text");  //APPEND METHOD
+
+    let newParagraph = $("<p>This is a dynamically created paragraph.</p>");
+    $("body").append(newParagraph);
+
+
+    let prependParagraph = $("<p>This is the prepend method paragraph.</p>");
+    $("body").prepend(prependParagraph);    //PREPEND METHOD
+
+    let afterParagraph = $("<p>After paragraph</p>");
+    $("#my2-paragraph").after(afterParagraph);
+    
+
+
+    $("#my-paragraph").remove();            //REMOVE METHOD
+    $("#my2-paragraph").empty();            //EMPTY METHOD
+    </script>
+</body>
+</html>

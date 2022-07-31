@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery - Content manipulation</title>
+  </head>
+  <body>
+    <h1 id="heading1">This is heading 1.</h1>
+
+    <ul id="my-list">
+      <li>item uno</li>
+      <li>item dos</li>
+      <li>item tres</li>
+    </ul>
+
+    <form id="my-form">
+      <input type="text" name="name" id='name'/>
+      <input id="male" type="radio" name="gender" value="male" /><label for="male"
+        >Male</label
+      >
+      <input id="female" type="radio" name="gender" value="female" /><label
+        for="female"
+        >Female</label
+      >
+      <input type="checkbox" name="newsletter" value="yes" id="newsletter">
+      <label for="newsletter">I would like to receive a newsletter</label>
+      <input value="submit" type="submit" />
+    </form>
+
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script>
+      let h1Text = $("#heading1").text(); //it would work the same with html() instead of text()
+      console.log(h1Text);
+
+      let listText = $("#my-list").html(); //if I used text (), it would not display the html tags <li>
+      console.log(listText);
+
+      //Redefining text via jQuery:
+      let newHeadingText = $("#heading1").text(
+        "This is heading 1 redefined via jQuery"
+      ); //OR
+      let newHeadingHtmlText = $("#heading1").html(
+        "This is <span style='color:red'>new</span> text."
+      );
+      
+     
+     
+      //Working on the form:
+      $('#name').val('default value');
+      $("#my-form").submit(function (e) {
+        
+        e.preventDefault(e);
+
+        let nameValue = $('#name').val();
+        let selectedGender = $('input[name=gender]:checked').val();
+        let checkedBox = $('#newsletter').is(':checked');
+
+        console.log(nameValue);
+        console.log(selectedGender);
+        console.log(checkedBox);
+      });
+
+    </script>
+  </body>
+</html>
