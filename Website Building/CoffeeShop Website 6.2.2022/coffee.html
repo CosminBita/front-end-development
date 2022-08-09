@@ -308,50 +308,71 @@
         </div>
       </div>
     </footer>
-
+    <script src="../Module 4. jsQuery/JS/jquery-3.6.0.min.js"></script>
     <script>
-      window.addEventListener("load", function () {
-        let menuBar = document.getElementById("menu-bar");
-        let closeBtn = document.getElementById("close-button");
-        let mobileMenu = document.getElementById("mobile-menu");
-        let mobileMenuItem =
-          document.getElementsByClassName("mobile-menu-item");
+            window.addEventListener("load", function () {
+              /*let menuBar = document.getElementById("menu-bar");
+              let closeBtn = document.getElementById("close-button");
+              let mobileMenu = document.getElementById("mobile-menu");
+              let mobileMenuItem =
+                document.getElementsByClassName("mobile-menu-item");
 
-        menuBar.addEventListener("click", function () {
-          mobileMenu.style.display = "block";
-        });
+              menuBar.addEventListener("click", function () {
+                mobileMenu.style.display = "block";
+              });
 
-        closeBtn.addEventListener("click", function () {
-          mobileMenu.style.display = "none";
-        });
+              closeBtn.addEventListener("click", function () {
+                mobileMenu.style.display = "none";
+              });
 
-        for (let i = 0; i < mobileMenuItem.length; i++) {
-          mobileMenuItem[i].addEventListener("click", function () {
-            mobileMenu.style.display = "none";
-          });
-        }
-        //FOR HEADER:
+              for (let i = 0; i < mobileMenuItem.length; i++) {
+                mobileMenuItem[i].addEventListener("click", function () {
+                  mobileMenu.style.display = "none";
+                });
+              }*/
+              $("#menu-bar, #close-button").click(function () {
+                $("#mobile-menu").toggle();
+              });
 
-        let heroSection = document.getElementById("hero-section");
-        let heroSectionHeight = heroSection.clientHeight;
+              //FOR HEADER:
 
-        let header = document.getElementById("header");
+              /*let heroSection = document.getElementById("hero-section");
+              let heroSectionHeight = heroSection.clientHeight;
 
-        document.addEventListener("scroll", function(){
+              let header = document.getElementById("header");
 
-          if(document.documentElement.scrollTop > heroSectionHeight){
-            if(!header.classList.contains("solid-header")){
-              header.classList.add("solid-header");
+              document.addEventListener("scroll", function(){
+
+                if(document.documentElement.scrollTop > heroSectionHeight){
+                  if(!header.classList.contains("solid-header")){
+                    header.classList.add("solid-header");
+                  }
+                } else {
+                  if(header.classList.contains("solid-header")){
+                    header.classList.remove("solid-header");
+                  }
+                }
+              })
+      */
+           $(document).scroll(function(){
+
+            let header = $("#header");
+
+            if($(this).scrollTop() > $("#hero-section").height()){
+
+              if(!header.hasClass("solid-header")){
+                header.addClass("solid-header");
+              }
+            
+            } else {
+
+              if(header.hasClass("solid-header")){
+                header.removeClass("solid-header")
+              }
             }
-          } else {
-            if(header.classList.contains("solid-header")){
-              header.classList.remove("solid-header");
-            }
-          }
-        })
 
-
-      });
+           })
+            });
     </script>
 
     <script src="js/jquery-3.6.0.slim.min.js"></script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <style>
+      #map {
+        height: 580px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script src="js/leaflet.js"></script>
+
+    <script>
+      /*var myMap = L.map("map");*/
+      /*myMap.setView([37, 23], 10);*/
+
+      var myMap = L.map("map", {
+        center: [37.974, 23.72],
+        zoom: 13,
+        attributionControl: false,
+        zoomControl: true,
+        doubleClickZoom: false,
+        scrollWheelZoom: false,
+        dragging: false,
+        minZoom: 10,
+        maxZoom: 17,
+      });
+
+      //TILELAYER DEFINES THE MAP RESOURCE
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(myMap);
+
+     // myMap.locate({ setView: true, maxZoom: 18 });//geolocation!
+
+     var marker = L.marker([37.974, 23.72]).addTo(myMap);//adding marker
+    </script>
+  </body>
+</html>

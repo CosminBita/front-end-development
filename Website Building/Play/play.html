@@ -1,65 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <title>DOM</title>
-    <style>
-      #first-div {
-        background-color: brown;
-        height: 250px;
-        width: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      #second-div {
-        background-color: rgb(63, 42, 165);
-        height: 100px;
-        width: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      #third-div {
-        background-color: rgb(42, 165, 122);
-        height: 50px;
-        width: 50px;
-      }
-      
-    </style>
-  </head>
-  <body>
-    
-</div>
-  </body>
-
-  <div id="first-div">
-    <div id="second-div">
-      <div id="third-div">
-
-      </div>
-    </div>
-  </div>
-    <script>
-    var divOne = document.getElementById('first-div');
-    var divTwo = document.getElementById('second-div');
-    var divThree = document.getElementById('third-div');
-
-    divOne.addEventListener('click', eventHandler, true);
-    divTwo.addEventListener('click', eventHandler, true);
-    divThree.addEventListener('click', eventHandler, true);
-
-    function eventHandler(e) {
-      console.log('You have clicked ' + this.id);
-      e.stopPropagation();
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5</title>
+  <style>
+    #my-div {
+      height: 150px;
+      width: 150px;
+      background: url(imgs/WEBB0_14_01.png) -50px 0;
     }
-    </script>
+  </style>
+</head>
+<body>
+<div id="my-div">
 
-    <script src="js/jquery-3.6.0.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
+</div>
+</body>
 </html>
