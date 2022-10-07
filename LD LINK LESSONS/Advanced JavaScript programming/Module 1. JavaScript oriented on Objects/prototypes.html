@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototypes</title>
+</head>
+<body>
+  <script>
+    function Car(make, model, weight, color) {
+      this.make = make;
+      this.model=model;
+      this.weight=weight;
+      this.color=color;
+
+     this.startEngine="The engine of " + this.make + " " + this.model + " " + "has started.";
+    }
+
+    var subaruLegacy = new Car("Subaru", "Legacy", 1560, "red");
+   //console.log(subaruLegacy.toString());
+   
+   console.log(Car.prototype); //The object prototype defined by the constructor function
+
+   console.log(subaruLegacy.__proto__ === Car.prototype);
+
+   console.log(Car.prototype.__proto__ === Object.prototype);
+
+   //JavaScript Object Prototypes:
+
+   Object()
+   Function()
+   String()
+
+   console.log(Object.__proto__ === Function.prototype);
+  
+
+   
+  </script>
+</body>
+</html>

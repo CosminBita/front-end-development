@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing and Callback Functions</title>
+</head>
+<body>
+    <button id = 'my-button'>Click Me!</button>
+
+    <script>
+        
+        var myButton = document.getElementById('my-button');
+        
+        myButton.addEventListener('click', function(){
+
+            alert ('hello from modal window');
+
+            console.log('hello from statement after alert() method');
+        });
+
+        console.log('hello from some code after addEventListener() method');
+
+
+        //delaying a function:
+        setTimeout(function(){
+            console.log('hello, world');
+        }, 5000);
+
+        //canceling a set timeout:
+        var clear = setTimeout(function(){
+            console.log('Clearing a timeout before it even starts');
+        }, 3000);
+        clearTimeout(clear);
+
+        //adding a parameter to setTimeout that is given to the function's parameter:
+        var Ben = setTimeout(function(name){
+            console.log('hello ' + name);
+        }, 3000, 'Ben');
+
+
+        //more advanced example:
+        console.log('statement1');
+
+        var timeout1 = setTimeout(function(){
+            console.log('statement2');
+        }, 2000);
+
+        var timeout2 = setTimeout(function(timeout) {
+            clearTimeout(timeout);
+            console.log('timeout1 is cleared...');
+        }, 1000, timeout1);
+
+        console.log('statement3');
+    </script>
+</body>
+</html>

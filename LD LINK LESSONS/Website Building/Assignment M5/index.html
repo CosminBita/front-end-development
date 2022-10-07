@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Website Building</title>
+
+    <style>
+      body {
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      #login-container {
+        width: 460px;
+        margin: 0 auto;
+      }
+
+      form label,
+      form input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      form label {
+        font-weight: bold;
+      }
+
+      form input {
+        padding: 8px;
+      }
+
+      form div {
+        margin: 16px 0px;
+      }
+
+      .valid {
+        border-color: green;
+      }
+
+      .invalid {
+        border-color: red;
+      }
+
+      .par {
+        display: none;
+      }
+
+      #fieldOne {
+        position: relative;
+      }
+      #x-mark {
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        color: red;
+        font-size: 26px;
+        display: none;
+      }
+      #check-mark {
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        color: green;
+        font-size: 26px;
+        display: none;
+      }
+
+      
+      #fieldTwo {
+        position: relative;
+      }
+      #Px-mark {
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        color: red;
+        font-size: 26px;
+        display: none;
+      }
+      #Pcheck-mark {
+        position: absolute;
+        right: 2px;
+        bottom: 5px;
+        color: green;
+        font-size: 26px;
+        display: none;
+      }
+    </style>
+
+    <script
+      src="https://kit.fontawesome.com/2415a348c9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="login-container">
+      <form id="my-form">
+        <div id="fieldOne">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+          <i id="x-mark" class="fa-solid fa-circle-xmark"></i>
+          <i id="check-mark" class="fa-solid fa-check"></i>
+        </div>
+
+        <div id="fieldTwo">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <i id="Px-mark" class="fa-solid fa-circle-xmark"></i>
+          <i id="Pcheck-mark" class="fa-solid fa-check"></i>
+        </div>
+
+        <input type="submit" id="push" value="Login" />
+        <p id="succesful-login" class="par">Succesful login!</p>
+        <p id="invalid-username" class="par">*please, enter valid username</p>
+        <p id="null-username" class="par">*please, enter username</p>
+        <p id="invalid-password" class="par">*please, enter valid password</p>
+        <p id="null-password" class="par">*please, enter password</p>
+      </form>
+    </div>
+
+    <script>
+      var formAction = document.getElementById("my-form");
+
+      var fieldUser = document.getElementById("username");
+      var fieldPassword = document.getElementById("password");
+
+      formAction.addEventListener("submit", go);
+
+      function go(e) {
+        e.preventDefault();
+
+        let usernameValue = fieldUser.value;
+        let passwordValue = fieldPassword.value;
+
+        if (usernameValue == "new_user" || passwordValue == "123456789") {
+          document.getElementById("succesful-login").style.display = "block";
+          document.getElementById("invalid-password").style.display = "none";
+          document.getElementById("invalid-username").style.display = "none";
+          fieldUser.classList.add("valid");
+          fieldUser.classList.remove("invalid");
+          fieldPassword.classList.add("valid");
+          fieldPassword.classList.remove("invalid");
+        }
+
+        if (usernameValue == "new_user") {
+          fieldUser.classList.add("valid");
+          fieldUser.classList.remove("invalid");
+          document.getElementById("check-mark").style.display = "block";
+          document.getElementById("x-mark").style.display = "none";
+          document.getElementById("invalid-username").style.display = "none";
+
+        } else if (usernameValue == null) {
+          fieldUser.classList.add("invalid");
+          fieldUser.classList.remove("valid");
+          document.getElementById("null-username").style.display = "block";
+          document.getElementById("succesful-login").style.display = "none";
+          document.getElementById("x-mark").style.display = "block";
+          document.getElementById("check-mark").style.display = "none";
+
+        } else {
+          fieldUser.classList.add("invalid");
+          fieldUser.classList.remove("valid");
+          document.getElementById("invalid-username").style.display = "block";
+          document.getElementById("succesful-login").style.display = "none";
+          document.getElementById("x-mark").style.display = "block";
+          document.getElementById("check-mark").style.display = "none";
+        }
+
+        if (passwordValue == "123456789") {
+          fieldPassword.classList.add("valid");
+          fieldPassword.classList.remove("invalid");
+          document.getElementById("Pcheck-mark").style.display = "block";
+          document.getElementById("Px-mark").style.display = "none";
+
+        } else if (passwordValue == null) {
+          fieldPassword.classList.add("invalid");
+          fieldPassword.classList.remove("valid");
+          document.getElementById("null-password").style.display = "block";
+          document.getElementById("succesful-login").style.display = "none";
+          document.getElementById("Px-mark").style.display = "block";
+          document.getElementById("Pcheck-mark").style.display = "none";
+
+        } else {
+          fieldPassword.classList.add("invalid");
+          fieldUser.classList.remove("valid");
+          document.getElementById("invalid-password").style.display = "block";
+          document.getElementById("succesful-login").style.display = "none";
+          document.getElementById("Px-mark").style.display = "block";
+          document.getElementById("Pcheck-mark").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

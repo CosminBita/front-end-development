@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions</title>
+  </head>
+  <body>
+    <script>
+      //Function with parameters and return
+      /*
+      function calcRectArea (a,b) {
+          return a*b;
+      }
+      var result = calcRectArea(5,10);
+      console.log(result);*/
+
+      //Function with parameter and no return
+      /*
+      function sayHello (name) {
+          console.log('Hello ' + name);
+      }
+      sayHello('Ben');*/
+
+      //Function with no parameter and no return
+      /*
+      function sayHelloWorld() {
+          console.log('Hello, world');
+      }
+      sayHelloWorld();*/
+
+      //Creating a function in a non-traditional way, using string (not recommended)
+      /*var calcRectArea = new Function ('a', 'b', 'return a*b');
+      var result = calcRectArea (82,928);
+      console.log(result);
+
+
+
+
+      function sum() {
+        returnValue = 0;
+        for (i = 0; i < arguments.length; i++) {
+          returnValue = returnValue + arguments[i];
+        }
+        return returnValue;
+      }
+
+      let sumResult = sum(2,4,9,33);
+      console.log(sumResult);
+
+    
+    
+      function countdown(start) {
+      for (let i = start; i>=0; i--){
+        console.log(i);
+      }
+    }
+    countdown(5);*/
+
+
+    //RECURSIVE FUNCTION:
+   
+    function countdown(start) {
+      if (start<0) {
+        return;
+      }
+      console.log(start);
+      countdown(--start);
+    }
+    countdown(8);
+
+
+      
+    </script>
+  </body>
+</html>

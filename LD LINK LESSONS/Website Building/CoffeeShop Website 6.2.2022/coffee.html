@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css1/bootstrap.min.css" />
+    <link rel="stylesheet" href="css1/style.css" />
+    <link rel="stylesheet" href="css/leaflet/leaflet.css">
+    <title>WEBISTE</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2415a348c9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="mobile-menu">
+      <a id="close-button" href="#">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </a>
+      <div class="container">
+        <div class="row align-items-center vh-100">
+          <div class="col-12 text-center">
+            <nav>
+              <div>
+                <a
+                  href="#about-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >about</a
+                >
+              </div>
+              <div class="my-3">
+                <a
+                  href="#contact-info-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >contact</a
+                >
+              </div>
+              <div class="mb-3">
+                <a
+                  href="#menu-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >products</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#map-section"
+                  class="mobile-menu-item h3 text-decoration-none text-uppercase"
+                  >how to find us?</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header id="header" class="p-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4"><img src="svg/header-logo.svg" alt="WHY" /></div>
+          <div class="d-none d-md-block col-8 text-end">
+            <a href="#about-section" class="text-decoration-none text-uppercase"
+              >about</a
+            >
+            <a
+              href="#contact-info-section"
+              class="text-decoration-none text-uppercase"
+              >contact</a
+            >
+            <a href="#menu-section" class="text-decoration-none text-uppercase"
+              >products</a
+            >
+            <a href="#map-section" class="text-decoration-none text-uppercase"
+              >how to find us?</a
+            >
+          </div>
+          <div class="d-md-none col-8 text-end">
+            <a href="#" id="menu-bar">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="hero-section">
+      <div class="container-fluid">
+        <div class="row vh-100 align-items-center pb-5">
+          <div class="col-12 text-center text-light">
+            <img
+              id="logo"
+              src="svg/logo.svg"
+              class="rounded-circle"
+              alt="not working"
+            />
+            <h1 class="display-2 fw-bold">THE HOME OF COFFEE</h1>
+            <p class="lead">
+              Our tradition in making excellent goddamn cofee goes back seven
+              generations. It all started in 1589 with slaves and a bit of good
+              old fashioned whipping.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a id="arrow-down" href="#intro-section"></a>
+    </section>
+
+    <section id="intro-section" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-10 text-center">
+            <h1 class="text-uppercase fw-bold">home of the roasted coffee</h1>
+            <p class="lead">
+              Since the beginning of time, humans had to quickly wake up to the
+              smell of coffee. If they were sleepy when stepping out of their
+              caves, the dinosaurs would eat them. So, after banging their
+              primitive females during morning glory, they had them make coffee.
+              And here we are today. No dinosaurs, but bitches and coffee are
+              still around.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center py-5">
+          <div class="col-sm-4 text-center">
+            <img
+              class="intro-icon img-fluid py-3"
+              src="svg/icon-1.svg"
+              alt="coffee beans"
+            />
+            <p class="h4 text-uppercase fw-bold">Best Beans</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <img
+              class="intro-icon img-fluid py-3"
+              src="svg/icon-2.svg"
+              alt="milk"
+            />
+            <p class="h4 text-uppercase fw-bold">Quality Milk</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <img
+              class="intro-icon img-fluid py-3"
+              src="svg/icon-3.svg"
+              alt="blender"
+            />
+            <p class="h4 text-uppercase fw-bold">Professional Blend</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-5 offset-md-1 align-self-center p-5">
+            <h2 class="text-uppercase">great place</h2>
+            <p class="lead text-capitalize">
+              this is where all of your coffee dreams come true. our waitresses
+              will make you come in your pants.
+            </p>
+            <button class="btn btn-danger">Find out more</button>
+          </div>
+          <div
+            id="about-bg-1"
+            class="d-none d-md-block col-md-5 offset-md-1"
+          ></div>
+        </div>
+        <div class="row" id="about-bg-2">
+          <div class="col-12 col-md-6 align-self-center">
+            <h2 class="text-light">FRESH BEANS</h2>
+            <p class="text-light">
+              Drink it, make sure you tip and then get the fuck outta here.
+            </p>
+            <button class="btn btn-danger">Find out more</button>
+          </div>
+          <div class="col-0 col-md-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center py-5">
+            <h1>SELECTION FROM OUR MENU</h1>
+            <p class="muted lead">
+              Below you will find our most popular items, buy one show us your
+              tits for free.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 text-center">
+            <img
+              src="imgs1/capuccino 1.png"
+              alt="capuccino"
+              class="rounded-circle"
+            />
+            <h2>Capuccino</h2>
+            <p class="lead my-3">Straight from the titty</p>
+            <p class="h3">$5</p>
+          </div>
+          <div class="col-sm-6 col-md-4 text-center">
+            <img
+              src="imgs1/greenTea 1.png"
+              alt="green tea"
+              class="rounded-circle"
+            />
+            <h2>Green Tea</h2>
+            <p class="lead my-3">Straight from the leaf's nipple</p>
+            <p class="h3">$3</p>
+          </div>
+          <div class="col-sm-6 col-md-4 text-center">
+            <img src="imgs1/OJ 1.png" alt="OJ" class="rounded-circle" />
+            <h2>Orange Juice</h2>
+            <p class="lead my-3">Freshly squeezed</p>
+            <p class="h3">$8</p>
+          </div>
+          <div class="col-4 text-center">
+            <img
+              src="imgs1/biscotti 1.png"
+              alt="biscotti"
+              class="rounded-circle"
+            />
+            <h2>Biscotti</h2>
+            <p class="lead my-3">Baked in the back, by our homeless employee</p>
+            <p class="h3">$4</p>
+          </div>
+          <div class="col-4 text-center">
+            <img
+              src="imgs1/espresso 1.png"
+              alt="espresso"
+              class="rounded-circle"
+            />
+            <h2>Espresso</h2>
+            <p class="lead my-3">
+              Espresso express, drink it now! Drink like you mean it.
+            </p>
+            <p class="h3">$6</p>
+          </div>
+          <div class="col-4 text-center">
+            <img
+              src="imgs1/Frapuccino.png"
+              alt="frapucino"
+              class="rounded-circle"
+            />
+            <h2>Frapucino</h2>
+            <p class="lead my-3">Straight from Dunkin Donuts, we resell it.</p>
+            <p class="h3">$9</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-info-section">
+      <div class="container-fluid">
+        <div class="row text-light" id="contact-info-bg-1">
+          <div class="col-md-5 offset-md-1 p-5">
+            <h2 class="text-uppercase">welcome</h2>
+            <p>Come on in!</p>
+            <br />
+            <h4 class="text-uppercase">week days</h4>
+            <p>8am-6pm</p>
+            <br />
+            <h4 class="text-uppercase">weekends</h4>
+            <p>10am-6pm</p>
+          </div>
+          <div class="col-md-6 p-5" id="contact-info-bg-2">
+            <h2>CONTACT</h2>
+            <br />
+            <h4 class="text-uppercase">address</h4>
+            <p>Your Mom's Ave nr. 69</p>
+            <br />
+            <h4 class="text-uppercase">phone</h4>
+            <p>1-800-go-fuckyourself</p>
+            <br />
+            <h4 class="text-uppercase">email</h4>
+            <p>gulagchupacabra@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="'map-section">
+      <div id="map"></div>
+    </section>
+
+    <footer>
+      <div class="container-fluid py-3">
+        <div class="row text-light">
+          <div class="col-md-5 offset-1 align-self-center">
+            Coffee Shop | &copy 2020 All rights reserved
+          </div>
+          <div class="col-md-5 text-end mt-3" id="social-media">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="mx-3"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="mx-3"><i class="fa-brands fa-tumblr"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js1/jquery-3.6.0.slim.min.js"></script>
+    <script src="js1/bootstrap.bundle.min.js"></script>
+    <script src="js/leaflet.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        /*let menuBar = document.getElementById("menu-bar");
+              let closeBtn = document.getElementById("close-button");
+              let mobileMenu = document.getElementById("mobile-menu");
+              let mobileMenuItem =
+                document.getElementsByClassName("mobile-menu-item");
+
+              menuBar.addEventListener("click", function () {
+                mobileMenu.style.display = "block";
+              });
+
+              closeBtn.addEventListener("click", function () {
+                mobileMenu.style.display = "none";
+              });
+
+              for (let i = 0; i < mobileMenuItem.length; i++) {
+                mobileMenuItem[i].addEventListener("click", function () {
+                  mobileMenu.style.display = "none";
+                });
+              }*/
+        $("#menu-bar, #close-button").click(function () {
+          $("#mobile-menu").toggle();
+        });
+
+        //FOR HEADER:
+
+        /*let heroSection = document.getElementById("hero-section");
+              let heroSectionHeight = heroSection.clientHeight;
+
+              let header = document.getElementById("header");
+
+              document.addEventListener("scroll", function(){
+
+                if(document.documentElement.scrollTop > heroSectionHeight){
+                  if(!header.classList.contains("solid-header")){
+                    header.classList.add("solid-header");
+                  }
+                } else {
+                  if(header.classList.contains("solid-header")){
+                    header.classList.remove("solid-header");
+                  }
+                }
+              })
+      */
+        $(document).scroll(function () {
+          let header = $("#header");
+
+          if ($(this).scrollTop() > $("#hero-section").height()) {
+            if (!header.hasClass("solid-header")) {
+              header.addClass("solid-header");
+            }
+          } else {
+            if (header.hasClass("solid-header")) {
+              header.removeClass("solid-header");
+            }
+          }
+        });
+      });
+
+
+      var myMap = L.map("map", {
+        center:[40.751840, -73.970280],
+        zoom: 17
+      });
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(myMap);
+
+      var myIcon = L.icon ({
+        iconUrl: 'img/map-icon.png'
+      });
+
+     var marker = L.marker([40.751840, -73.970280], {
+      icon: myIcon
+     }).addTo(myMap);
+
+     marker.bindPopup("we are here");
+    </script>
+
+
+  </body>
+</html>

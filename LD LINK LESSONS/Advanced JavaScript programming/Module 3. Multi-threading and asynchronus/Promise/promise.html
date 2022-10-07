@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <!-- <h1 id="my-heading">Heading</h1>
+    <button id="my-button">Click me, fuckers</button>-->
+
+    <script>
+      /* var heading = document.getElementById('my-heading');
+
+          window.addEventListener('load', function() {
+
+              console.log('Web page has been loaded');
+
+              document.getElementById('my-button').addEventListener('click', function(){
+
+              setInterval(function () {
+
+                  heading.style.color = heading.style.color == 'red' ? 'blue' : 'red';
+
+              }, 200);
+
+              });
+
+          });*/
+
+      //TO AVOID UNNECESSARY NESTING (IMBRICARI PE ROMANESTE),
+      //PROMISE WAS CREATED - BELOW AN EXAMPLE, NOT FUNCTIONAL ONLY FOR DISPLAYING LOGIC:
+
+      /*dosomethingAsync(successCallback, failureCallback);
+
+        function successCallback (result) {
+
+          console.log('The operation was successful, the result is ' + result);
+
+        }
+
+        function failureCallback (error) {
+
+          'You made a mistake, the error is: ' + error;
+        }
+
+        let promise = dosomethingAsync();
+
+        promise.then(successCallback, failureCallback);*/
+
+      //FUNCTIONAL EXAMPLES FOR PROMISE:
+
+      /* var promise = new Promise(function (resolve, reject) {
+          let result = Math.random() * 10;
+
+          resolve(result);
+        });
+
+        promise.then(
+          function (result) {
+            console.log("Operation successful. The result is " + result);
+          },
+          function (error) {
+            console.log("Operation failed. The error is " + error);
+          });
+
+          console.log('Hello to everyone');*/
+
+      //WRAPPING setTimeout () IN A PROMISE:
+
+      /* function delay(time) {
+
+          return new Promise(function (resolve, reject) {
+
+            setTimeout(resolve, time);
+
+          });
+        }
+
+        delay(4000).then(function() {
+
+          console.log('Four seconds passed...');
+
+        })*/
+
+      //OR
+
+      function delay(time) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            reject(new Error("Unknown error..."));
+          }, time);
+        });
+      }
+
+      delay(3000).catch(function(error){ //or delay(3000).then(null, function(error){...
+                                         // or delay(3000).finally(function()...
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>

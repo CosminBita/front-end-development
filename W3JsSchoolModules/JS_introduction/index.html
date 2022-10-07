@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 Intro</title>
+</head>
+<body>
+<!--1. JavaScript Can Change HTML content:-->
+<p id="demo">This is the initial HTML paragraph.</p>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML='This paragraph has been dynamically created in JS.'">Click me, bastardo</button>
+
+<br> <br> <br>
+<!--2. JavaScript Can Change HTML Styles (CSS):-->
+<p id="demo2">JavaScript can change the style of the elements.</p>
+<button type="button" onclick="document.getElementById('demo2').style.color='red'">Color last paragraph</button>
+
+<br><br><br>
+
+<!--3.JavaScript Can Hide HTML Elements:-->
+<p id="demo3">Paragraph to be hidden</p>
+<button type="button" onclick="document.getElementById('demo3').style.display='none'">Hide last paragraph</button>
+
+<br><br><br>
+
+<!--JavaScript Can Show HTML Elements:-->
+<p id="demo4" style="display:none">Paragraph to be revealed by JS</p>
+<button type="button" onclick="document.getElementById('demo4').style.display='block'">Reveal last paragraph</button>
+<br><br><br>
+
+<!--4.Paragraph changed by function:-->
+<p id="demo5">Paragraph 5.</p>
+<button type="button" onclick="changeIt()">Change It</button>
+<script>
+    function changeIt(){
+        document.getElementById("demo5").innerHTML = "JS Function made me via button activation.";
+    }
+</script>

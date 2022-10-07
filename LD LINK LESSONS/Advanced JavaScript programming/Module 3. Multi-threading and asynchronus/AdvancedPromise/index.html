@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Promise</title>
+  </head>
+  <body>
+    <script>
+      //A SIMPLE EXAMPLE:
+
+      /*let promise = new Promise(function(resolve, reject) {
+        resolve(4);
+      });
+
+      let promise2 = promise.then(function(value){
+        console.log(value);
+        return value * value;
+      });
+
+      promise2.then(function(value){
+        console.log('Final value is ' + value);
+      });*/
+
+      //Simplified by concatenation and using Arrow Functions:
+
+      /* new Promise(function (resolve, reject) {
+            resolve(4);
+          })
+            .then((value) => {
+              console.log(value);
+              return value * value;
+            })
+            .then((value) => {
+              console.log("The final result is " + value);
+            });*/
+
+      /*new Promise(function (resolve, reject) {
+            resolve(4);
+          }).then(function (value) {
+            return new Promise(function (resolve, reject) {
+              setTimeout(() => resolve(value * value), 3000);
+            }).then(function (value) {
+              console.log("Final value is " + value);
+            });
+          });*/
+
+      /*function delay(time) {
+            return new Promise(function (resolve, reject) {
+              setTimeout(resolve, time);
+            });
+          }
+
+          delay(4000)
+            .then(function () {
+              console.log("4 seconds have passed...");
+              return delay(3000);
+            })
+            .then(function () {
+              console.log("3 more seconds have passed...");
+              return delay(2000);
+            })
+            .then(function () {
+              console.log("2 more seconds have passed...");
+            });*/
+
+      /* let promise = new Promise(function(resolve, reject){
+              setTimeout(() => reject(new Error('Unknown Error')), 3000);
+            });
+
+            let promise1 = new Promise(function(resolve, reject) {
+              setTimeout(() => reject('Eroare Necunoscuta'), 6000);
+            });
+
+            promise.then(function(resolve){
+              console.log(resolve);
+            }, function(reject){
+              console.log(reject);
+            });
+
+            promise1.catch(function(error){
+              console.log(error);
+            });*/
+
+      /*let promise = new Promise(function(resolve, reject) {
+              throw new Error('error');
+            });
+
+            promise.catch(function(error){
+              console.log(error);
+            }); THROWING A NEW ERROR WORKS ONLY IN SINCRON FUNCTIONS, BELOW IS AN EXAMPLE OF ASINCRON FUNCTION:*/
+
+      /*let promise = new Promise (function(resolve, reject) {
+              setTimeout(() =>  {throw new Error ('error')}, 3000)
+            });
+
+            promise.catch(function(error){
+              console.log(error);
+            }); - IT IS UNCAUGHT ALTHOUGH WE USE CATCH, BECAUSE IT IS IN AN ASINCRON FUNCTION*/
+
+      //USING CATCH METHOD AT THE END OF PROMSIE CONCAT:
+
+      /*new Promise(function (resolve, reject) {
+        reject(new Error("EROARE"));
+      })
+        .then(function (value) {
+          setTimeout(() => {
+            return value * value;
+          }, 4000);
+        })
+        .then(function (value) {
+          console.log(value);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });*/
+
+        //USING CATCH METHOD WHEN THE ERROR IS THROWN IN THE CALLBACK FUNCTION:
+
+        new Promise(function(resolve, reject){
+          resolve(4);
+
+        }).then(function(value){
+
+          return new Promise(function(resolve, reject) {
+            setTimeout(() => resolve (value * value), 4000);
+          });
+        }).then(function(value){
+
+          throw new Error('eroarea pulii');
+          console.log('the final value is ' + value);
+          
+        }).catch(function(error){
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

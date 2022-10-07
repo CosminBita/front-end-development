@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+
+        //EXAMPLE 1:
+      function generateCoupon (firstName, lastName) {
+        var code = (Math.random() * 10e6).toString();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.getCode = function(){return code};
+      }
+
+      var coupon1 = new generateCoupon('John', 'Locke');
+      console.log(coupon1.getCode());
+
+      //EXAMPLE 2:
+      let sayHello = (function() {
+
+        const greeting = 'hello ';
+
+        return {
+            to: function(name) {
+                return greeting + name;
+            }
+        }
+      })();
+
+      let newGreeting = sayHello.to('John');
+      console.log(newGreeting);
+
+
+    </script>
+  </body>
+</html>

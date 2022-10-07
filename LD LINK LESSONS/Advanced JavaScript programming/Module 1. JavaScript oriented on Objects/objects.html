@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //DIFFERENT WAYS OF CREATING OBJECTS IN JAVASCRIPT:
+
+        //1. Using a literal object - use when you need to create one object, simplest way:
+        var subaruLegacy = {
+            make: 'Subaru',
+            model: 'Legacy',
+            weight: 1360,
+            color: 'black'
+        };
+        console.log(subaruLegacy.color);
+       
+
+        //2. Using the special keyword 'new'  - not useful in practice:
+        var audiQuatro = new Object();
+        audiQuatro.make = 'Audi';
+        audiQuatro.model = 'Quatro';
+        audiQuatro.weight = 1232;
+        audiQuatro.color = 'red';
+        console.log(audiQuatro.weight);
+      
+        //3.Creating a construction function for multiple objects-
+        //  use when you need to create multiple objects with similar characteristics:
+        function Car(model, make, color) {
+            this.model = model;
+            this.make = make;
+            this.color = color;
+
+            this.startEngine = function(){
+                return 'The engine of' + ' ' + this.model + ' ' + this.make + ' has started.';
+            }
+        }
+        var PorschePanamera = new Car('Porsche', 'Panamera', 'blue');
+        var DaciaLogan = new Car('Dacia', 'Logan', 'tricolor');
+        var MercedesBenz = new Car('Mercedes', 'Benz', 'red');
+        console.log(DaciaLogan.color);
+        console.log(MercedesBenz.startEngine());
+
+       //Functions like the one above (i.e. startEngine) can also be applied on literal objects 
+       //(#1 at beginning of this page):
+
+       var blondeBigTits = {
+        age: 33,
+        height: 'five four',
+        tits: 'big',
+        eyes: 'hazel',
+        undressHer() {
+            return 'The specimen has ' + this.eyes + ' eyes ' + 'and ' + this.tits + ' tits.';
+        }
+       }
+       console.log(blondeBigTits.undressHer());
+    </script>
+</body>
+</html>

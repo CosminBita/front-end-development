@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Async & Await</title>
+  </head>
+  <body>
+    <script>
+      /* function sayHello() {
+
+         return "hello world";
+
+       }
+
+       console.log(sayHello());
+
+
+
+       //Using it as a promise (ASYNC TURNS FUNCTION INTO PROMISE OBJECTS)
+
+
+       async function sayBye() {
+
+         return "bye world";
+
+       };
+
+       sayBye().then(function (response) {
+
+         console.log(response);
+
+       });
+
+       console.log('some other bullshit code') //will show before the async function*/
+
+      //USING AWAIT:
+
+      /*function getName() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => resolve("Ben"), 3000);
+        });
+      }
+
+      async function sayHello() {
+
+        let name;
+        name = await getName();
+
+        return "hello " + name;
+      }
+
+      sayHello().then(function (result) {
+        console.log(result);
+      });*/
+
+      /*async function sayHello() {
+
+        throw new Error('Unkown error...')
+        return "hello, world";
+      }
+
+      sayHello().catch(
+        function (reject) {
+          console.log(reject);
+        }
+      );*/
+
+      function getName() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => reject("Unknown error..."), 4000);
+        });
+      }
+
+      async function sayHello() {
+        try {
+          let name = await getName();
+        } catch (e) {
+          return e;
+        };
+
+        return "hello " + name;
+      }
+
+      sayHello().then(function (result) {
+        console.log(result);
+      }),
+        function (reject) {
+          console.log(reject);
+        };
+
+        console.log('some bullshit code');
+    </script>
+  </body>
+</html>

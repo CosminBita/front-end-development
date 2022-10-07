@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Module 1</title>
+  </head>
+  <body>
+    <script>
+      class Kids {
+        constructor(name, address, phone, course) {
+          this.name = name;
+          this.address = address;
+          this.phone = phone;
+          this.course = course;
+        }
+
+        getInfo() {
+          return "Name: " +
+            this.name +
+            "\n" +
+            "Address: " +
+            this.address +
+            "\n" +
+            "Phone: " +
+            this.phone +
+            "\n" +
+            "Course: " +
+            this.course;
+        }
+      }
+
+      let studentOne = new Kids(
+        "Johnny Black",
+        "10 West 10th St.",
+        "917-229-3972",
+        "mathematics"
+      );
+      let studentTwo = new Kids(
+        "Johnny Red",
+        "20 East 20th St.",
+        "845-387-2929",
+        "English"
+      );
+      let studentThree = new Kids(
+        "Johnny Blue",
+        "30 West 30th St.",
+        "347-928-9902",
+        "swimming"
+      );
+
+      let infoOne = studentOne.getInfo();
+      let infoTwo = studentTwo.getInfo();
+      let infoThree = studentThree.getInfo();
+
+      console.log(infoOne);
+      console.log(infoTwo);
+      console.log(infoThree);
+    </script>
+  </body>
+</html>

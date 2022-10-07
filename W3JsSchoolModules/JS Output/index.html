@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Output</title>
+</head>
+<body>
+
+    <!--Using inner HTML:-->
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML="Hello world via innerHTML.";
+    </script>
+
+
+    <!--Using document.write():-->
+    <script>
+        document.write("Hello world via document.write().");
+    </script>
+
+    <!--Using document.write() after HTML elements will delete HTML elements when activated:-->
+    <h2>Heading</h2>
+    <p>Paragraph</p>
+    <button type="button" onclick="document.write(5+6)">Click</button>
+
+    <!--The window.print() Method:-->
+    <button type="button" onclick="window.print()">Print this page</button>
+
+</body>
+</html>

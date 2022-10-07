@@ -1,0 +1,192 @@
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+/********************************HEADER*****************************************/
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+header a {
+  color: white;
+  margin-left: 24px;
+}
+header a:hover {
+  color: white;
+}
+header a:visited {
+  color: white;
+}
+
+#circleMenu {
+  width: 50px;
+}
+
+#menu-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+} 
+#menu-bar i {
+  font-size: 32px;
+}
+
+.solid-header {
+position: fixed;
+background-color: #c69572;
+transition: background-color 1s ease;
+}
+
+/*****************************HERO-SECTION***************************************/
+
+#hero-section {
+  background-image: url(../imgs1/coffee-shop-15.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#logo {
+  width: 256px;
+}
+#hero-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #4133329c;
+  height: 100vh;
+}
+#arrow-down {
+  position: absolute;
+  bottom: 24px;
+  width: 46px;
+  height: 40px;
+  border: solid 2px white;
+  border-radius: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+#arrow-down::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-right: solid 2px white;
+  border-bottom: solid 2px white;
+  left: 0;
+  right: 0;
+  top: 3px;
+  margin: 0 auto;
+  transform: rotate(45deg);
+}
+
+/******************************************Intro-Section***********************************/
+
+#intro-section {
+  background: #eae7de;
+}
+
+.intro-icon {
+  width: 96px;
+}
+
+.intro-icon:hover {
+  transform: scale(1.1);
+}
+
+/******************************************About-section***********************************/
+
+#about-bg-1 {
+  background-image: url(../imgs1/bar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 480px;
+  background-position: right;
+}
+
+#about-bg-2 {
+  background-image: url(../imgs1/coffee-cup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 640px;
+  background-position: left;
+}
+
+/********************************************Menu-section***********************************/
+
+#menu-section {
+  background: #eae7de;
+}
+
+/********************************************Contact-info-section***************************/
+
+#contact-info-bg-1 {
+  background: linear-gradient(to right, #36313782, #36313782),
+    url(../imgs1/OG-20-16.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact-info-bg-2 {
+  background-color: #312423a8;
+}
+
+/**************************************************Footer****************************************/
+
+footer {
+  background-color: #312423;
+}
+
+footer a i {
+  font-size: 32px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  #social-media {
+    text-align: center !important;
+  }
+}
+
+/************************************************Map-section****************************************/
+
+#map {
+  height: 400px;
+}
+
+/************************************************Mobile-menu***************************************/
+
+#mobile-menu {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 2;
+background: #312423ed;
+display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: grey;
+}
+
+#close-button {
+  position: absolute;
+  top: 8px;
+  right: 23px;
+  width: 20px;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions within functions</title>
+  </head>
+  <body>
+    <script>
+
+        //Creating a global variable by declaring the function
+      function myFunction() {
+        x = 5;
+      }
+      myFunction();
+      console.log(x);
+    
+       //Creating a self-invoking function
+      (function selfInvoking () {
+        console.log('This is a self-invoking function')
+      })();
+
+      //Self-invoking functions do not turn their variables global:
+      (function sample () {
+        var number = 9;
+        console.log(number);
+      })();
+      console.log(number);
+
+      //The same variable can be re-declared:
+      var number = 29;
+      console.log(number);
+
+      //Functions within functions:
+      function subtractSquares(a,b) {
+        
+        function square (x) {
+            return x * x;
+        }
+        
+        return square(a) - square(b);
+      }
+      console.log(subtractSquares(4,9));
+      //A function within a function cannot be globally declared
+    </script>
+  </body>
+</html>

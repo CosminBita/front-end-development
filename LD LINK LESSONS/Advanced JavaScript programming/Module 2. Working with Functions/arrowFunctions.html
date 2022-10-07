@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <script>
+      var a = function (x) {
+        return x * x;
+      };
+
+      //OR ITS ARROW FUNCTION EQUIVALENT:
+
+      var a = (x) => {
+        return x * x;
+      };
+      //Simplified version, when there is only one parameter:
+      //var a = x => x * x;
+      console.log(a(3));
+
+      //No parameters:
+      var a = () => "Hello, world.";
+      console.log(a());
+
+      //No return value in body:
+      var a = () => {
+        console.log("Hello, world AGAIN.");
+      };
+      a();
+
+      //One parameter:
+      var a = (name) => {
+        console.log("hello " + name);
+      };
+      a("Ben");
+
+      //Two parameters:
+      var a = (x, y) => x * y;
+      console.log(a(3, 9));
+
+      //When there is more than one command in body,use {} and return:
+      var a = (x, y) => {
+        x++;
+        return x * y;
+      };
+      console.log(a(5, 10));
+
+      //Using the Arrow Function for the previous lesson's example:
+      let names = ["Mimi", "Coco", "Bubu"];
+      function sayHelloToMany(names, sayHelloToOne) {
+        for (let i = 0; i < names.length; i++) {
+          sayHelloToOne(names[i]);
+        }
+      }
+      sayHelloToMany(names, (name) => {
+        console.log("hello " + name);
+      });
+
+      //Using keyword 'this' to build Arrow Functions:
+
+      function Student() {
+        this.courses = [];
+        this.addCourses = function (courses) {
+          courses.forEach((value, index) => {
+            this.courses[index] = value;
+          });
+        };
+      }
+      var s = new Student();
+      s.addCourses(['math', 'geo', 'physics']);
+      console.log(s.courses);
+    </script>
+  </body>
+</html>

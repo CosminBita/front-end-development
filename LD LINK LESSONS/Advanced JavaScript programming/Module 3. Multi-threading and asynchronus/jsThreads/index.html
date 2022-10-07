@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Functions</title>
+        <style>
+            #my-button {
+                width: 200px;
+                height: 40px;
+                color: white;
+                background-color: teal;
+                border-radius: 4px;
+                line-height: 40px;
+                text-align: center;
+                font-family: sans-serif;
+            }
+ 
+            #my-button:hover {
+                background-color: rgb(30, 109, 109);
+                cursor: pointer;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+ 
+    <body>
+ 
+        <div id="my-button">Click me</div>
+ 
+        <script>
+            var myButton = document.getElementById("my-button");
+            const worker = new Worker('time-intensive.js');
+ 
+            myButton.addEventListener("click", function () {
+ 
+                //time-intensive operation start 
+                worker.postMessage('Start!');
+ 
+                console.log("Hello from statement after time-intensive operation.");
+ 
+                worker.onmessage = function (e) {
+                    //time-intensive operation end 
+                    console.log(e.data.length);
+                }
+ 
+            });
+ 
+        </script>
+ 
+    </body>
+ 
+</html>
