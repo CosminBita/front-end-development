@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+
+  <style>
+    #loader {
+      height: 18px;
+      width: 18px;
+      display: inline-block;
+      display: none;
+    }
+
+    #loader:after {
+      content: "";
+      display: block;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      border: 3px solid rgb(109, 109, 237);
+      border-color: rgb(109, 109, 237) transparent rgb(109, 109, 237)
+        transparent;
+      animation: lds 1.2s linear infinite;
+    }
+
+    @keyframes lds {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #textArea {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+  <body>
+    <button id="my-button">Get Students Data</button>
+    <div id="loader"></div>
+    <textarea id="textArea" rows="30"></textarea>
+
+    <script>
+      var button = document.getElementById("my-button");
+      var loader = document.getElementById("loader");
+      var textArea = document.getElementById("textArea");
+
+      button.addEventListener("click", function () {
+        getData();
+      });
+
+      async function getData() {
+        try {
+          loader.style.display = "inline-block";
+          let response = await fetch(
+            "https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt"
+          );
+
+          if (response.status !== 200) {
+            throw new Error("Server error.");
+          }
+
+          let text = await response.text();
+
+          let parsed = text.split("\r\n");
+          console.log(parsed);
+
+          class Student {
+            constructor(name, address, phone, subject) {
+              this.name = name;
+              this.address = address;
+              this.phone = phone;
+              this.subject = subject;
+            }
+
+            getInfo() {
+              return (
+                "Name: " +
+                this.name +
+                "\n" +
+                "Adresss: " +
+                this.adress +
+                "\n" +
+                "Phone: " +
+                this.phone +
+                "\n" +
+                "Course: " +
+                this.course +
+                "\n\n"
+              );
+            }
+          }
+
+          var arrayStudents = [];
+
+          for(i=0; i<parsed.length; i+=4) {
+            arrayStudents.push(new Student(parsed[i], parsed[i+1], parsed[i+2], parsed[i+3]));
+          }
+
+          for(i=0; i<arrayStudents.length; i++){
+            let studentInfo = arrayStudents[i].getInfo();
+            document.getElementById('textArea').value += studentInfo;
+          }
+
+
+        } catch (err) {
+          textArea.innerHTML = "BIG MISTAKE, SITTING BULL";
+        } finally {
+          loader.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

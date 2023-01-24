@@ -1,0 +1,14 @@
+<?xml-stylesheet type="text/css" href="recipes.css"?>
+
+<root>
+
+<recipe>
+        <title>Grilled Cheese Sandwich</title>
+        <ingredients>
+            <ingredient qty="2">bread slice</ingredient>
+            <ingredient>cheese slice</ingredient>
+            <ingredient qty="2">margarine pat</ingredient>
+        </ingredients>
+    </recipe>
+
+</root>

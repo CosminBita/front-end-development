@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment Module 3 - Advanced JS</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Module 3</title>
+  </head>
+  <style>
+    button {
+      color: red;
+      background-color: black;
+    }
+  </style>
+  <body>
+    <button id="myButton">Get Student List</button>
+    <div id="students"></div>
+    <script>
+      class Student {
+        constructor(name, address, phone, subject) {
+          this.name = name;
+          this.address = address;
+          this.phone = phone;
+          this.subject = subject;
+        }
+        getInfo() {
+          return `Name: ${this.name} 
+             Address: ${this.address}`;
+        }
+      }
+
+      async function getData() {
+        try {
+          let response = await fetch(
+            "https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt"
+          );
+          if (response.status !== 200) {
+            throw new Error("Unknown server error");
+          }
+          let text = await response.text();
+          let arr = text.split("\r\n");
+
+          let Student1 = new Student(arr[0], arr[1], arr[2], arr[3]);
+          let Student2 = new Student(arr[4], arr[5], arr[6], arr[7]);
+          let Student3 = new Student(arr[8], arr[9], arr[10], arr[11]);
+          let Student4 = new Student(arr[12], arr[13], arr[14], arr[15]);
+          let Student5 = new Student(arr[16], arr[17], arr[18], arr[19]);
+
+          let output = ` <div>
+              <p>This is student 1:</p>
+              <p> Name: ${Student1.name}<p>
+              <p> Address: ${Student1.address}<p> 
+            </div>
+        `;
+
+          output =
+            output +
+            `
+            <div>
+              <p>This is student 2:</p>
+              <p id ='name'> Name: ${Student2.name}<p>
+              <p> Address: ${Student2.address}<p> 
+            </div>
+        `;
+
+          document.getElementById("students").innerHTML = output;
+          document.getElementById("name").style.color = "blue";
+        } catch (err) {
+          console.log("Fetch issue: " + err.message);
+        }
+      }
+
+      document.getElementById("myButton").addEventListener("click", getData);
+    </script>
+  </body>
 </html>
