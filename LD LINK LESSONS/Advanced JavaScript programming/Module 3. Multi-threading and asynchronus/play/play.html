@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS PLAY</title>
-  </head>
-  <body>
-    <script>
-      const arr1 = [1, 92,8, 10, 100, 23, 2];
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age comparisont</title>
+</head>
+<body>
+  
+  <script>
 
-     const sortedNumbers = arr1.sort((a, b) => {
-       if(a > b) {
-         return 1;
-       } else if (a < b) {
-         return -1;
-       } else {
-         return 0;
-       }
-      })
-      console.log(sortedNumbers);
-    </script>
-  </body>
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+
+    p1 = Person('Samuel', 24);
+    p2 = Person('John', 29);
+    p3 = Person('Jimmy', 87);
+
+    
+
+
+  </script>
+
+</body>
 </html>

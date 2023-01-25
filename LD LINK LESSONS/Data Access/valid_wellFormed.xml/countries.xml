@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<root xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:NoNamespaceSchemaLocation='country.xsd'>
+<country countrycode = 'Sr'>
+   <name>Serbia</name>
+   <capital>Belgrade</capital>
+   <description>Serbia is...</description>
+</country>
+<country countrycode = 'Fr'>
+   <name>France</name>
+   <capital>Paris</capital>
+   <description>France is...</description>
+</country>
+</root>
